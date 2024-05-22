@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
@@ -72,7 +73,7 @@ fun Login() {
                     fontFamily = PoppinsSemiBold,
                     textAlign = TextAlign.Center)
             }
-            Spacer(modifier = Modifier.height(130.dp))
+            Spacer(modifier = Modifier.height(180.dp))
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
@@ -83,10 +84,13 @@ fun Login() {
                     shape = RoundedCornerShape(10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
-                        unfocusedContainerColor = Color(0xffF1F4FF)),
-                    modifier = Modifier
+                        unfocusedContainerColor = Color(0xffF1F4FF),
+                        focusedBorderColor = Color.Transparent,
+                        unfocusedBorderColor = Color.Transparent),
+                            modifier = Modifier
                         .width(309.dp)
-                        .height(47.dp),
+                        .height(47.dp)
+                        .shadow(4.dp, RoundedCornerShape(10.dp)),
                     label = {
                         Text(
                             text = "exemplo@locaweb.com.br",
@@ -111,10 +115,13 @@ fun Login() {
                     shape = RoundedCornerShape(10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
-                        unfocusedContainerColor = Color(0xffF1F4FF)),
+                        unfocusedContainerColor = Color(0xffF1F4FF),
+                        focusedBorderColor = Color.Transparent,
+                        unfocusedBorderColor = Color.Transparent),
                     modifier = Modifier
                         .width(309.dp)
-                        .height(47.dp),
+                        .height(47.dp)
+                        .shadow(4.dp, RoundedCornerShape(10.dp)),
                     label = {
                         Text(
                             text = "Senha",
@@ -171,7 +178,8 @@ fun Login() {
                     contentPadding = PaddingValues(5.dp),
                     elevation = ButtonDefaults.buttonElevation(3.dp),
                     modifier = Modifier
-                        .width(309.dp),
+                        .width(309.dp)
+                        .padding(bottom = 50.dp),
                 ) {
                     Text(
                         text = "Criar nova conta",
@@ -183,8 +191,8 @@ fun Login() {
                 }
             }
         }
-
     }
+
 }
 
 @Preview(showSystemUi = true)
