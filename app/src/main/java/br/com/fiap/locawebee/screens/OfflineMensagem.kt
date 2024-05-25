@@ -1,5 +1,6 @@
 package br.com.fiap.locawebee.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -18,7 +19,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
-import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
@@ -31,9 +31,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
@@ -42,11 +40,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.locawebee.R
+import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Lixeira2() {
+fun OfflineMensagem() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -65,7 +64,7 @@ fun Lixeira2() {
                     contentDescription = "ícone do projeto LocaWeBee",
                     modifier = Modifier.size(width = 62.dp, height = 53.dp)
                 )
-                Spacer(modifier = Modifier.width(8.dp)) // Espaço entre a imagem e o texto/progresso
+                Spacer(modifier = Modifier.width(8.dp))
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.fillMaxWidth()
@@ -91,85 +90,100 @@ fun Lixeira2() {
                     )
                 }
             }
-            Column(
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center,
+            Row (
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
                 modifier = Modifier
+                    .background(Color(0xffCF0000))
                     .fillMaxWidth()
-                    .drawBehind {
-                        val strokeWidth = 2.dp.toPx()
-                        val y = strokeWidth / 2
-                        drawLine(
-                            color = Color.LightGray,
-                            start = Offset(0f, y),
-                            end = Offset(size.width, y),
-                            strokeWidth = strokeWidth
-                        )
-                    }
-            )  {
-                Row (verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.Start,
-                    modifier = Modifier
-                        .padding(top = 10.dp)
-                ){
-                    Button(onClick = { /*TODO*/ },
-                        colors = ButtonDefaults.buttonColors(Color.White)
-                    ){
-                        Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar a uma página",
-                            tint = Color.Black)
-                    }
-
-                    Text(
-                        text = "Lixeira",
-                        fontFamily = PoppinsSemiBold,
-                        fontSize = 30.sp,
-                        //textAlign = TextAlign.Center,
-                        color = Color.Black,
-                        modifier = Modifier.width(245.dp)
-                            .padding(horizontal = 40.dp)
-                    )
-                }
+                    .width(375.dp)
+                    .height(47.dp)
+            ){
+                Text(
+                    text = "Sem Conexão",
+                    fontSize = 16.sp,
+                    fontFamily = PoppinsSemiBold,
+                    textAlign = TextAlign.Center,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 9.dp)
+                )
             }
         }
-        Column (
-            modifier = Modifier.fillMaxSize()
-                .padding(bottom = 100.dp),
-            verticalArrangement = Arrangement.SpaceEvenly,
-            horizontalAlignment = Alignment.CenterHorizontally
-
+        Box(modifier = Modifier.align(Alignment.Center).height(328.dp)
+            .border(BorderStroke(width = 2.dp, color = (Color(0xffF9F9F9))))
         ){
-            Text(text = "Tudo limpo!",
-                fontSize = 30.sp,
-                fontFamily = PoppinsRegular,
-                color = Color.Black)
-        }
-        Box(
-            modifier = Modifier
-                .align(Alignment.Center)
-                .padding(top = 250.dp)
-        ){
-            Row(
-                modifier = Modifier
-                    .padding(10.dp)
+            Column (horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.padding(horizontal = 20.dp)
+                    .height(328.dp)
 
-            ){
-                Button(
-                    onClick = {},
-                    colors = ButtonDefaults.buttonColors(Color(0xffCBD6FF)),
-                    modifier = Modifier
-                        .width(220.dp)
-                        .height(31.dp),
-                    shape = RoundedCornerShape(10.dp),
-                    contentPadding = PaddingValues(5.dp),
-                    elevation = ButtonDefaults.buttonElevation(5.dp)
+                ){
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center,
                 ){
                     Text(
-                        text = "Esvaziar lixeira",
-                        color = (Color.White),
+                        text = "Sem Conexão",
                         fontSize = 16.sp,
                         fontFamily = PoppinsSemiBold,
-                        textAlign = TextAlign.Center
+                        textAlign = TextAlign.Center,
+                        color = Color(0xff1D1F33),
+                        modifier = Modifier.padding(top = 9.dp)
                     )
+                }
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.Center
+                ){
+                    Text(
+                        text = "Você está sem conexão!\n" +
+                                "Mas não se preocupe, você\n" +
+                                "ainda pode visualizar seus e-mails.",
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Center,
+                        color = Color(0xff1D1F33),
+                        modifier = Modifier.padding(top = 10.dp, bottom = 30.dp)
+                    )
+                }
+                Column{
+                    Button(
+                        onClick = {},
+                        colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
+                        modifier = Modifier
+                            .width(220.dp)
+                            .height(31.dp),
+                        shape = RoundedCornerShape(10.dp),
+                        contentPadding = PaddingValues(5.dp),
+                        elevation = ButtonDefaults.buttonElevation(10.dp)
+                    ){
+                        Text(
+                            text = "Tentar reconexão",
+                            color = (Color.White),
+                            fontSize = 16.sp,
+                            fontFamily = PoppinsSemiBold,
+                            textAlign = TextAlign.Center
+                        )
+                    }
+                    Spacer(modifier = Modifier.height(12.dp))
+                    Button(
+                        onClick = {},
+                        colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
+                        modifier = Modifier
+                            .width(220.dp)
+                            .height(31.dp),
+                        shape = RoundedCornerShape(10.dp),
+                        contentPadding = PaddingValues(5.dp),
+                        elevation = ButtonDefaults.buttonElevation(10.dp)
+                    ){
+                        Text(
+                            text = "Tudo bem",
+                            color = Color(0xff000000),
+                            fontSize = 16.sp,
+                            fontFamily = PoppinsSemiBold,
+                            textAlign = TextAlign.Center
+                        )
+                    }
                 }
             }
         }
@@ -295,7 +309,7 @@ fun Lixeira2() {
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
                 .background(Color(0xff1D1F33))
-                .border(2.dp, Color(0xffFFFFFF)),
+                .border(1.dp, Color(0xffFFFFFF)),
         ) {
             Row(
                 horizontalArrangement = Arrangement.spacedBy(40.dp, Alignment.CenterHorizontally),
@@ -326,7 +340,7 @@ fun Lixeira2() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Search, contentDescription = "ícone settings",
+                    Icon(imageVector = Icons.Default.Search, contentDescription = "ícone pesquisa",
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
@@ -338,7 +352,7 @@ fun Lixeira2() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.DateRange, contentDescription = "ícone settings",
+                    Icon(imageVector = Icons.Default.DateRange, contentDescription = "ícone calendário",
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
@@ -350,22 +364,20 @@ fun Lixeira2() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "ícone settings",
+                    Icon(imageVector = Icons.Default.Star, contentDescription = "ícone favoritos",
                         tint = Color(color = 0xffFBBC24), modifier = Modifier.size(45.dp))
                 }
             }
         }
-
-
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun Lixeira2Preview() {
+fun OfflineMensagemPreview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Lixeira2()
+        OfflineMensagem()
     }
 }

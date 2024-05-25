@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
@@ -31,19 +32,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.locawebee.R
+import br.com.fiap.locawebee.ui.theme.OpenSansBold
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
+import br.com.fiap.locawebee.ui.theme.RobotoBold
+import br.com.fiap.locawebee.ui.theme.RobotoRegular
 
 @Composable
 fun Lixeira() {
@@ -53,19 +62,19 @@ fun Lixeira() {
             .background(Color.White)
     ) {
         Column(
-            verticalArrangement = Arrangement.Top,
-        ) {
+            verticalArrangement = Arrangement.Top
+        ){
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
-                    .padding(start = 20.dp, bottom = 10.dp)
+                    .padding(start = 20.dp, bottom = 10.dp,top = 10.dp)
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.bee_logo),
                     contentDescription = "ícone do projeto LocaWeBee",
                     modifier = Modifier.size(width = 62.dp, height = 53.dp)
                 )
-                Spacer(modifier = Modifier.width(8.dp)) // Espaço entre a imagem e o texto/progresso
+                Spacer(modifier = Modifier.width(8.dp))
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     modifier = Modifier.fillMaxWidth()
@@ -131,6 +140,153 @@ fun Lixeira() {
                     )
                 }
             }
+            Column(
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .padding(start = 20.dp, bottom = 10.dp, top = 10.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ricardo_remetente),
+                        contentDescription = "ícone do projeto LocaWeBee",
+                        modifier = Modifier
+                            .size(35.7.dp) // Certifique-se de que a largura e a altura sejam iguais para formar um círculo perfeito
+                            .clip(CircleShape) // Arredonda a imagem em formato de círculo
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.Start,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = "Ricardo Mendes",
+                            fontSize = 15.sp,
+                            fontFamily = OpenSansBold,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.width(230.dp)
+                        )
+                        val text = buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                                append("Preparado para a próxima semana?\n")
+                            }
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                                append("Estamos ansiosos para te receber no nos... ")
+                            }
+                        }
+
+                        Text(
+                            text = text,
+                            fontSize = 13.sp,
+                            fontFamily = RobotoRegular,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.width(251.8.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(end = 20.dp)
+                            .weight(0.3f)
+                    ) {
+                        Text(
+                            text = "6 Mai",
+                            fontFamily = RobotoBold,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 12.sp,
+                            color = Color(0xff292929),
+                            modifier = Modifier.padding(bottom = 5.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "ícone favoritos",
+                            tint = Color(color = 0xffFBBC05),
+                            modifier = Modifier.size(width = 16.08.dp, height = 15.29.dp)
+                        )
+                    }
+                }
+            }
+            Column(
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ){
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .padding(start = 20.dp, bottom = 10.dp, top = 10.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.bemvestido_remetente),
+                        contentDescription = "ícone do projeto LocaWeBee",
+                        modifier = Modifier
+                            .size(35.7.dp) // Certifique-se de que a largura e a altura sejam iguais para formar um círculo perfeito
+                            .clip(CircleShape) // Arredonda a imagem em formato de círculo
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.Start,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = "Bem Vestido - Bem-Vindo(a)!",
+                            fontSize = 15.sp,
+                            fontFamily = OpenSansBold,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.width(230.dp)
+                        )
+                        val text = buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                                append("Saiba Mais\n")
+                            }
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                                append("Parabéns, por criar sua conta! ")
+                            }
+                        }
+
+                        Text(
+                            text = text,
+                            fontSize = 13.sp,
+                            fontFamily = RobotoRegular,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.width(251.8.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(end = 20.dp)
+                            .weight(0.3f)
+                    ) {
+                        Text(
+                            text = "6 Mai",
+                            fontFamily = RobotoBold,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 12.sp,
+                            color = Color(0xff292929),
+                            modifier = Modifier.padding(bottom = 5.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "ícone favoritos",
+                            tint = Color(color = 0xffFBBC05),
+                            modifier = Modifier.size(width = 16.08.dp, height = 15.29.dp)
+                        )
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.width(8.dp))
         }
         Box(
             modifier = Modifier
@@ -165,7 +321,7 @@ fun Lixeira() {
         Box (
             modifier = Modifier
                 .align(Alignment.Center)
-                .padding(top = 710.dp)
+                .padding(top = 650.dp)
                 .background(Color(0xff1D1F33))
                 .border(2.dp, Color(0xffFFFFFF))
         ){
@@ -174,6 +330,7 @@ fun Lixeira() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .width(375.dp)
+                    .height(58.dp)
             ){
                 Button(
                     onClick = { /*TODO*/ },
@@ -286,10 +443,12 @@ fun Lixeira() {
                 .border(1.dp, Color(0xffFFFFFF)),
         ) {
             Row(
-                horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
+                horizontalArrangement = Arrangement.spacedBy(40.dp, Alignment.CenterHorizontally),
+                verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier
                     .fillMaxWidth()
                     .width(375.dp)
+                    .height(76.dp)
             ) {
                 Button(
                     onClick = { /*TODO*/ },
@@ -301,7 +460,7 @@ fun Lixeira() {
 
                 ) {
                     Icon(imageVector = Icons.Default.Settings , contentDescription = "ícone settings",
-                        tint = Color.White, modifier = Modifier.size(47.dp))
+                        tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
                     onClick = { /*TODO*/ },
@@ -312,8 +471,8 @@ fun Lixeira() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Search, contentDescription = "ícone settings",
-                        tint = Color.White, modifier = Modifier.size(47.dp))
+                    Icon(imageVector = Icons.Default.Search, contentDescription = "ícone pesquisa",
+                        tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
                     onClick = { /*TODO*/ },
@@ -324,8 +483,8 @@ fun Lixeira() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.DateRange, contentDescription = "ícone settings",
-                        tint = Color.White, modifier = Modifier.size(47.dp))
+                    Icon(imageVector = Icons.Default.DateRange, contentDescription = "ícone calendário",
+                        tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
                     onClick = { /*TODO*/ },
@@ -336,8 +495,8 @@ fun Lixeira() {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "ícone settings",
-                        tint = Color(color = 0xffFBBC24), modifier = Modifier.size(47.dp))
+                    Icon(imageVector = Icons.Default.Star, contentDescription = "ícone favoritos",
+                        tint = Color(color = 0xffFBBC24), modifier = Modifier.size(45.dp))
                 }
             }
         }
