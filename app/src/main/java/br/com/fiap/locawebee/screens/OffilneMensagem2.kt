@@ -1,6 +1,5 @@
 package br.com.fiap.locawebee.screens
 
-
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -48,9 +47,8 @@ import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
-
 @Composable
-fun OfflineMensagem() {
+fun OffilneMensagem2() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -161,9 +159,8 @@ fun OfflineMensagem() {
                 )
                 Spacer(modifier = Modifier.height(10.dp))
                 Text(
-                    text = "Você está sem conexão!\n" +
-                            "Mas não se preocupe, você\n" +
-                            "ainda pode visualizar seus e-mails.",
+                    text = "Só é possível editar ler e editar\n" +
+                            "seus e-mails no modo offline.",
                     fontSize = 16.sp,
                     fontFamily = PoppinsMedium,
                     textAlign = TextAlign.Center,
@@ -200,7 +197,7 @@ fun OfflineMensagem() {
                     elevation = ButtonDefaults.buttonElevation(15.dp)
                 ) {
                     Text(
-                        text = "Tudo bem",
+                        text = "Continuar Offline",
                         color = Color(0xff000000),
                         fontSize = 16.sp,
                         fontFamily = PoppinsSemiBold,
@@ -422,10 +419,12 @@ fun OfflineMensagem() {
 
 @Preview(showBackground = true)
 @Composable
-fun OfflineMensagemPreview() {
+fun OfflineMensagem2Preview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        OfflineMensagem()
+        OffilneMensagem2()
     }
 }
+
+
