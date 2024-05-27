@@ -19,7 +19,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.DateRange
-import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.ExitToApp
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
@@ -45,7 +45,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun OfflinePrincipal() {
+fun OfflineOutros() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -117,8 +117,10 @@ fun OfflinePrincipal() {
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
-                modifier = Modifier.fillMaxWidth()
+                horizontalArrangement = Arrangement.End,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(end = 50.dp)
             ) {
                 Button(
                     onClick = {},
@@ -168,31 +170,151 @@ fun OfflinePrincipal() {
             }
         }
         Row (verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.Center,
-        modifier = Modifier.fillMaxWidth()
-            .padding(top = 300.dp)
+            horizontalArrangement = Arrangement.Center,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 300.dp)
         ){
             Text(text = "Ainda nada por aqui!",
                 color = Color(0xff1D1F33),
                 fontSize = 16.sp,
-                fontFamily = PoppinsRegular)
-        }
-        Button(
-            onClick = { /*TODO*/ },
-            colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
-            contentPadding = PaddingValues(5.dp),
-            modifier = Modifier
-                .size(50.dp)
-                .align(Alignment.CenterStart)
-        ) {
-            Icon(
-                imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "ícone add",
-                tint = Color.White,
-                modifier = Modifier
-                    .size(50.dp)
+                fontFamily = PoppinsRegular,
+                modifier = Modifier.padding(start = 70.dp)
             )
         }
+        Column (
+            modifier = Modifier
+                .width(77.dp)
+                .height(900.dp)
+                .padding(top = 73.dp)
+                .background(color = Color(0xff1D1F33)),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ){
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color(0xff3C59704D)),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(3.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Registro de\n" +
+                            "domínio",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color(0xff3C59704D)),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(3.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Hospedagem de site",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color(0xff3C59704D)),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(3.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Criador\n" +
+                            "de sites",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Spacer(modifier = Modifier.height(8.dp))
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color(0x4D3C59704D)),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(3.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Servidor\n" +
+                            "VPS",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color.Transparent),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(3.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Conheça\n" +
+                            "mais",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Spacer(modifier = Modifier.height(40.dp))
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color.Transparent),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(0.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Text(
+                    text = "Suporte",
+                    fontSize = 8.sp,
+                    fontFamily = PoppinsRegular,
+                    color = Color(0xff3C5970),
+                    textAlign = TextAlign.Center)
+            }
+            Box(
+                modifier = Modifier
+                    .width(20.dp)
+                    .height(2.dp)
+                    .background(Color(0xff3C5970))){}
 
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color.Transparent),
+                contentPadding = PaddingValues(5.dp),
+                modifier = Modifier
+                    .size(62.dp)
+                    .shadow(10.dp, shape = RoundedCornerShape(0.dp), clip = true),
+                shape = RoundedCornerShape(0.dp)
+            ) {
+                Icon(imageVector = Icons.Default.ExitToApp, contentDescription = "ícone pesquisa",
+                    tint = Color.White, modifier = Modifier.size(25.dp))
+            }
+        }
         Box(modifier = Modifier
             .align(Alignment.Center)
             .padding(top = 550.dp)
@@ -224,7 +346,7 @@ fun OfflinePrincipal() {
                 .align(Alignment.Center)
                 .padding(top = 650.dp)
                 .background(Color(0xff1D1F33))
-                .border(2.dp, Color(0xffFFFFFF))
+                .border(1.dp, Color(0xffFFFFFF))
         ){
             Row (
                 horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
@@ -406,10 +528,10 @@ fun OfflinePrincipal() {
 
 @Preview(showBackground = true)
 @Composable
-fun OfflinePrincipalPreview() {
+fun OfflineOutrosPreview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        OfflinePrincipal()
+        OfflineOutros()
     }
 }
