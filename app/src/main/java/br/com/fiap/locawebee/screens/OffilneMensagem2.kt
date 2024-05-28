@@ -83,9 +83,9 @@ fun OffilneMensagem2() {
                         modifier = Modifier.width(144.dp)
                     )
                     LinearProgressIndicator(
-                        progress = 0f, // Progresso fixo
+                        progress = 0f,
                         modifier = Modifier
-                            .height(20.dp) // Altura fixa
+                            .height(20.dp)
                             .width(230.dp)
                             .align(Alignment.CenterHorizontally),
                         trackColor = Color(0xffF1F4FF),
@@ -93,6 +93,12 @@ fun OffilneMensagem2() {
                     )
                 }
             }
+            Box(
+                modifier = Modifier
+                    .width(393.dp)
+                    .height(2.dp)
+                    .background(Color.LightGray)
+            )
             Row (
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
@@ -111,6 +117,12 @@ fun OffilneMensagem2() {
                     modifier = Modifier.padding(top = 9.dp)
                 )
             }
+            Box(
+                modifier = Modifier
+                    .width(393.dp)
+                    .height(2.dp)
+                    .background(Color.LightGray)
+            )
         }
         Button(
             onClick = { /*TODO*/ },

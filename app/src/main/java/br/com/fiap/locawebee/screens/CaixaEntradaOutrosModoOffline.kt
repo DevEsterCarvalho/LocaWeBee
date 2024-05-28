@@ -45,7 +45,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun OfflineOutros() {
+fun CaixaEntradaOutrosModoOffline() {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -90,14 +90,21 @@ fun OfflineOutros() {
                     )
                 }
             }
+            Box(
+                modifier = Modifier
+                    .width(393.dp)
+                    .height(2.dp)
+                    .background(Color.LightGray)
+            )
             Row (
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.Center,
+                horizontalArrangement = Arrangement.End,
                 modifier = Modifier
                     .background(Color(0xffCF0000))
                     .fillMaxWidth()
                     .width(375.dp)
                     .height(47.dp)
+                    .padding(end = 100.dp)
             ){
                 Text(
                     text = "Sem Conexão",
@@ -108,6 +115,12 @@ fun OfflineOutros() {
                     modifier = Modifier.padding(top = 9.dp)
                 )
             }
+            Box(
+                modifier = Modifier
+                    .width(393.dp)
+                    .height(2.dp)
+                    .background(Color.LightGray)
+            )
         }
         Box(
             modifier = Modifier
@@ -130,42 +143,41 @@ fun OfflineOutros() {
                         .height(44.dp),
                     contentPadding = PaddingValues(3.dp),
                 ) {
+                    Text(
+                        text = "Principal",
+                        color = Color.Black,
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsSemiBold,
+                        textAlign = TextAlign.Center
+                    )
+                }
+                Button(
+                    onClick = {},
+                    colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
+                    modifier = Modifier
+                        .width(100.dp)
+                        .height(44.dp),
+                    contentPadding = PaddingValues(3.dp),
+                ) {
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center,
                         modifier = Modifier.fillMaxSize()
                     ) {
                         Text(
-                            text = "Principal",
+                            text = "Outros",
                             color = Color.Black,
                             fontSize = 16.sp,
                             fontFamily = PoppinsSemiBold,
                             textAlign = TextAlign.Center
                         )
-                        Spacer(modifier = Modifier.height(2.dp))
                         Box(
                             modifier = Modifier
                                 .width(100.dp)
-                                .height(2.dp)
-                                .background(Color.Black)
+                                .height(1.dp)
+                                .background(Color(0xff1F41BB))
                         )
                     }
-                }
-                Button(
-                    onClick = {},
-                    colors = ButtonDefaults.buttonColors(Color.White),
-                    modifier = Modifier
-                        .width(100.dp)
-                        .height(44.dp),
-                    contentPadding = PaddingValues(3.dp),
-                ) {
-                    Text(
-                        text = "Outros",
-                        color = Color(0xff0A0A0A),
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsSemiBold,
-                        textAlign = TextAlign.Center
-                    )
                 }
             }
         }
@@ -186,7 +198,7 @@ fun OfflineOutros() {
             modifier = Modifier
                 .width(77.dp)
                 .height(900.dp)
-                .padding(top = 73.dp)
+                .padding(top = 74.dp)
                 .background(color = Color(0xff1D1F33)),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
@@ -528,10 +540,10 @@ fun OfflineOutros() {
 
 @Preview(showBackground = true)
 @Composable
-fun OfflineOutrosPreview() {
+fun CaixaEntradaOutrosModoOfflinePreview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        OfflineOutros()
+        CaixaEntradaOutrosModoOffline()
     }
 }
