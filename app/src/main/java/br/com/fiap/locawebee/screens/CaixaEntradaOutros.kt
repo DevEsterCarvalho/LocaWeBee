@@ -176,7 +176,7 @@ fun CaixaEntradaOutros() {
         Row (verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxWidth()
-                .padding(top = 250.dp)
+                .padding(top = 250.dp, start = 65.dp)
         ){
             Text(text = "Ainda nada por aqui!",
                 color = Color(0xff1D1F33),
