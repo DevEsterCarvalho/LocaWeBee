@@ -68,7 +68,7 @@ fun LojaPontos() {
             Box(
                 modifier = Modifier
                     .width(20.dp)
-                    .height(2.dp)
+                    .height(1.dp)
                     .background(Color(0xff1D1F33))
                     .align(Alignment.CenterHorizontally)
             )
