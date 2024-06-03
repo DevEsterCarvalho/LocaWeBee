@@ -149,7 +149,7 @@ fun Inventario() {
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.colmeia),
-                        contentDescription = "ícone do projeto LocaWeBee",
+                        contentDescription = "ícone colmeia",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
 
                     )
@@ -203,7 +203,7 @@ fun Inventario() {
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.favo_de_mel),
-                        contentDescription = "ícone do projeto LocaWeBee",
+                        contentDescription = "ícone favo de mel",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
                     )
@@ -238,7 +238,7 @@ fun Inventario() {
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.mel_melado),
-                        contentDescription = "ícone do projeto LocaWeBee",
+                        contentDescription = "ícone mel melado",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
                     )
@@ -273,7 +273,7 @@ fun Inventario() {
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.paixao),
-                        contentDescription = "ícone do projeto LocaWeBee",
+                        contentDescription = "ícone paixão",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
 
