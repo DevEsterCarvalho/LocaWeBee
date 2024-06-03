@@ -35,12 +35,15 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.locawebee.R
-import br.com.fiap.locawebee.ui.theme.PoppinsMedium
+import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
@@ -86,21 +89,27 @@ fun PrimeiroAcesso() {
                         text = "Prêmio Diário\n" +
                                 "Concedido!",
                         fontSize = 32.sp,
-                        fontFamily = PoppinsSemiBold,
+                        fontFamily = PoppinsRegular,
                         textAlign = TextAlign.Center,
                         color = Color(0xff1D1F33),
                         modifier = Modifier.padding(top = 50.dp)
                     )
                     Spacer(modifier = Modifier.height(10.dp))
                     Text(
-                        text = "Temos um presente para você\n" +
-                                "pelo seu primeiro acesso!\n" +
-                                "Use com sabedoria!",
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
+                        text = buildAnnotatedString {
+                            append("Temos um presente para você\n" +
+                                    "pelo seu ")
+                            withStyle(style = SpanStyle(fontFamily = PoppinsSemiBold)) {
+                                append("primeiro acesso!")
+                            }
+                            append("\nUse com sabedoria!")
+                        },
+                        fontSize = 14.sp,
+                        fontFamily = PoppinsRegular,
                         textAlign = TextAlign.Center,
-                        color = Color(0xff1D1F33),
-                        modifier = Modifier.padding(bottom = 30.dp)
+                        color = Color.Black,
+                        modifier = Modifier
+                            .padding(horizontal = 16.dp, vertical = 10.dp)
                     )
                 }
                 Button(

@@ -81,9 +81,9 @@ fun CaixaEntradaOutros() {
                         modifier = Modifier.width(144.dp)
                     )
                     LinearProgressIndicator(
-                        progress = 0f, // Progresso fixo
+                        progress = 0f,
                         modifier = Modifier
-                            .height(20.dp) // Altura fixa
+                            .height(20.dp)
                             .width(230.dp)
                             .align(Alignment.CenterHorizontally),
                         trackColor = Color(0xffF1F4FF),

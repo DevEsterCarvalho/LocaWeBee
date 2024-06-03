@@ -17,6 +17,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material3.Button
@@ -24,10 +25,10 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.LocalTextStyle
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,6 +40,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,8 +51,14 @@ import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
+
+
 @Composable
 fun NovoEmail() {
+    var email by remember {mutableStateOf("")}
+    var copiaEmail by remember { mutableStateOf("") }
+    var assunto by remember { mutableStateOf("") }
+    var conteudoEmail by remember { mutableStateOf("") }
     var text by remember { mutableStateOf("") }
     var showEmojiKeyboard by remember { mutableStateOf(false) }
 
@@ -111,7 +119,7 @@ fun NovoEmail() {
                 verticalArrangement = Arrangement.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(3.dp)
+                    .padding(5.dp)
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
@@ -139,9 +147,9 @@ fun NovoEmail() {
                     )
                 }
                 Spacer(modifier = Modifier.height(10.dp))
-                TextField(
-                    value = "",
-                    onValueChange = {},
+                OutlinedTextField(
+                    value = email,
+                    onValueChange = { email = it },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
                         unfocusedContainerColor = Color(0xffF1F4FF),
@@ -150,40 +158,30 @@ fun NovoEmail() {
                     ),
                     modifier = Modifier
                         .width(309.dp)
-                        .height(45.dp),
-                    label = {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                            Text(
-                                text = "Para: ",
-                                color = Color(0xff626262),
-                                fontSize = 16.sp,
-                                fontFamily = PoppinsMedium,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.padding(start = 2.dp)
-                            )
-                        }
-                    },
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                    singleLine = true,
+                        .height(50.dp),
                     placeholder = {
                         Text(
-                            text = "Digite o e-mail:",
+                            text = "Para: ",
                             color = Color(0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Start
+                            textAlign = TextAlign.Start,
+
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                    textStyle = LocalTextStyle.current.copy(
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Start,
+                        color = Color(0xff626262)
+                    ),
+                    singleLine = true,
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                TextField(
-                    value = "",
-                    onValueChange = {},
+                OutlinedTextField(
+                    value = copiaEmail,
+                    onValueChange = { copiaEmail = it },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
                         unfocusedContainerColor = Color(0xffF1F4FF),
@@ -192,40 +190,29 @@ fun NovoEmail() {
                     ),
                     modifier = Modifier
                         .width(309.dp)
-                        .height(45.dp),
-                    label = {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                            Text(
-                                text = "Cópia: ",
-                                color = Color(0xff626262),
-                                fontSize = 16.sp,
-                                fontFamily = PoppinsMedium,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.padding(start = 2.dp)
-                            )
-                        }
-                    },
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                    singleLine = true,
+                        .height(50.dp),
                     placeholder = {
                         Text(
-                            text = "Digite o e-mail:",
+                            text = "Cópia: ",
                             color = Color(0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Start
+                            textAlign = TextAlign.Start,
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                    textStyle = LocalTextStyle.current.copy(
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Start,
+                        color = Color(0xff626262)
+                    ),
+                    singleLine = true,
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                TextField(
-                    value = "",
-                    onValueChange = {},
+                OutlinedTextField(
+                    value = assunto,
+                    onValueChange = { assunto = it },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
                         unfocusedContainerColor = Color(0xffF1F4FF),
@@ -234,26 +221,7 @@ fun NovoEmail() {
                     ),
                     modifier = Modifier
                         .width(309.dp)
-                        .height(45.dp),
-                    label = {
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.CenterStart) {
-                            Text(
-                                text = "Assunto: ",
-                                color = Color(0xff626262),
-                                fontSize = 16.sp,
-                                fontFamily = PoppinsMedium,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.padding(start = 2.dp)
-                            )
-                        }
-                    },
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                    singleLine = true,
+                        .height(50.dp),
                     placeholder = {
                         Text(
                             text = "Assunto: ",
@@ -262,12 +230,19 @@ fun NovoEmail() {
                             fontFamily = PoppinsMedium,
                             textAlign = TextAlign.Start
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
+                    textStyle = LocalTextStyle.current.copy(
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Start,
+                        color = Color(0xff626262)
+                    ),
                 )
                 Spacer(modifier = Modifier.height(10.dp))
-                TextField(
-                    value = text,
-                    onValueChange = { text = it },
+                OutlinedTextField(
+                    value = conteudoEmail,
+                    onValueChange = { conteudoEmail = it },
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
                         unfocusedContainerColor = Color(0xffF1F4FF),
@@ -277,7 +252,7 @@ fun NovoEmail() {
                     modifier = Modifier
                         .width(309.dp)
                         .height(347.dp),
-                    label = {
+                    placeholder = {
                         Text(
                             text = "Digite aqui o conteúdo?",
                             color = Color(color = 0xff626262),
@@ -286,6 +261,7 @@ fun NovoEmail() {
                             textAlign = TextAlign.Center,
                         )
                     },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
                     textStyle = LocalTextStyle.current.copy(
                         fontSize = 16.sp,
                         fontFamily = PoppinsMedium,
@@ -295,8 +271,9 @@ fun NovoEmail() {
                 )
             }
         }
-        Box(modifier = Modifier.align(Alignment.CenterEnd)
-            .padding(top = 200.dp)
+        Box(modifier = Modifier
+            .align(Alignment.CenterEnd)
+            .padding(top = 100.dp)
         ) {
             Button(
                 onClick = { showEmojiKeyboard = true },

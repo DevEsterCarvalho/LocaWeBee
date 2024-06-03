@@ -13,18 +13,25 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,6 +43,8 @@ import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
 fun Login() {
+    var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier
@@ -80,7 +89,7 @@ fun Login() {
                     .fillMaxWidth()
                     .padding(30.dp)
             ) {
-                OutlinedTextField(value = "", onValueChange = {},
+                OutlinedTextField(value = email, onValueChange = {email = it},
                     shape = RoundedCornerShape(10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
@@ -89,29 +98,28 @@ fun Login() {
                         unfocusedBorderColor = Color.Transparent),
                             modifier = Modifier
                         .width(309.dp)
-                        .height(47.dp)
+                        .height(50.dp)
                         .shadow(4.dp, RoundedCornerShape(10.dp)),
-                    label = {
+                    placeholder = {
                         Text(
                             text = "exemplo@locaweb.com.br",
                             color = Color(color = 0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Center
+                            textAlign = TextAlign.Start
                         )
                     },
-                    placeholder = {
-                        Text(
-                            text = "Digite o seu e-mail: ",
-                            color = Color(color = 0xff626262),
-                            fontSize = 16.sp,
-                            fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Center
-                        )
-                    }
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                    textStyle = LocalTextStyle.current.copy(
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Start,
+                        color = Color(0xff626262)
+                    ),
+                    singleLine = true
                 )
                 Spacer(modifier = Modifier.height(15.dp))
-                OutlinedTextField(value = "", onValueChange = {},
+                OutlinedTextField(value = password, onValueChange = { password = it },
                     shape = RoundedCornerShape(10.dp),
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedContainerColor = Color(0xffF1F4FF),
@@ -120,26 +128,25 @@ fun Login() {
                         unfocusedBorderColor = Color.Transparent),
                     modifier = Modifier
                         .width(309.dp)
-                        .height(47.dp)
+                        .height(50.dp)
                         .shadow(4.dp, RoundedCornerShape(10.dp)),
-                    label = {
-                        Text(
-                            text = "Senha",
-                            color = Color(color = 0xff626262),
-                            fontSize = 16.sp,
-                            fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Center,
-                        )
-                    },
                     placeholder = {
                         Text(
-                            text = "Digite a sua senha: ",
+                            text = "Senha:",
                             color = Color(color = 0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Center
+                            textAlign = TextAlign.Start
                         )
-                    }
+                    },
+                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                    textStyle = LocalTextStyle.current.copy(
+                        fontSize = 16.sp,
+                        fontFamily = PoppinsMedium,
+                        textAlign = TextAlign.Start,
+                        color = Color(0xff626262)
+                    ),
+                    singleLine = true
                 )
                 Text(
                     text = "Esqueceu sua senha?",
@@ -178,8 +185,8 @@ fun Login() {
                     contentPadding = PaddingValues(5.dp),
                     elevation = ButtonDefaults.buttonElevation(3.dp),
                     modifier = Modifier
-                        .width(309.dp)
-                        .padding(bottom = 50.dp),
+                        .width(307.dp)
+                        .height(48.dp),
                 ) {
                     Text(
                         text = "Criar nova conta",

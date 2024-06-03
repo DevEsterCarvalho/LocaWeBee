@@ -18,6 +18,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.Search
@@ -89,9 +90,9 @@ fun Lixeira() {
                         modifier = Modifier.width(144.dp)
                     )
                     LinearProgressIndicator(
-                        progress = 0f, // Progresso fixo
+                        progress = 0f,
                         modifier = Modifier
-                            .height(20.dp) // Altura fixa
+                            .height(20.dp)
                             .width(230.dp)
                             .align(Alignment.CenterHorizontally),
                         //color = Color(0xff45BF6B), //Cor da barra
@@ -153,8 +154,8 @@ fun Lixeira() {
                         painter = painterResource(id = R.drawable.ricardo_remetente),
                         contentDescription = "ícone do projeto LocaWeBee",
                         modifier = Modifier
-                            .size(35.7.dp) // Certifique-se de que a largura e a altura sejam iguais para formar um círculo perfeito
-                            .clip(CircleShape) // Arredonda a imagem em formato de círculo
+                            .size(35.7.dp)
+                            .clip(CircleShape)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
                     Column(
@@ -314,6 +315,32 @@ fun Lixeira() {
                         fontSize = 16.sp,
                         fontFamily = PoppinsSemiBold,
                         textAlign = TextAlign.Center
+                    )
+                }
+            }
+        }
+        Box(modifier = Modifier
+            .align(Alignment.Center)
+            .padding(top = 550.dp)
+        ){
+            Row (
+                horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.End),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .width(375.dp)
+                    .height(58.dp)
+                    .padding(end = 8.dp)
+            ) {
+                Button(
+                    onClick = { /*TODO*/ },
+                    colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
+                    contentPadding = PaddingValues(5.dp),
+                    modifier = Modifier
+                        .size(50.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Add, contentDescription = "ícone add",
+                        tint = Color.White, modifier = Modifier.size(50.dp)
                     )
                 }
             }

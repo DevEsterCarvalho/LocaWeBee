@@ -106,7 +106,7 @@ fun Inventario() {
                         .padding(5.dp)
                 ) {
                     Text(
-                        text = "Emoji de abelha ",
+                        text = "Emoj de abelha ",
                         color = (Color(0xff1D1F33)),
                         fontFamily = PoppinsMedium,
                         fontSize = 16.sp,
