@@ -16,6 +16,8 @@ val OpenSansBold = FontFamily(Font(R.font.opensans_bold))
 val RobotoRegular = FontFamily(Font(R.font.roboto_regular))
 val RobotoBold = FontFamily(Font(R.font.roboto_bold))
 val OpenSansRegular = FontFamily(Font(R.font.opensans_regular))
+val LatoBold = FontFamily(Font(R.font.lato_bold))
+val LatoRegular = FontFamily(Font(R.font.lato_regular))
 
 // Set of Material typography styles to start with
 val Typography = Typography(
