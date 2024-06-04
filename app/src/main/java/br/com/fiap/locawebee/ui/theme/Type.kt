@@ -15,6 +15,7 @@ val PoppinsMedium = FontFamily(Font(R.font.poppins_medium))
 val OpenSansBold = FontFamily(Font(R.font.opensans_bold))
 val RobotoRegular = FontFamily(Font(R.font.roboto_regular))
 val RobotoBold = FontFamily(Font(R.font.roboto_bold))
+val OpenSansRegular = FontFamily(Font(R.font.opensans_regular))
 
 // Set of Material typography styles to start with
 val Typography = Typography(
