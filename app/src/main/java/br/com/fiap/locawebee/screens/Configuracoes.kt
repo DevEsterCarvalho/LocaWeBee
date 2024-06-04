@@ -84,6 +84,7 @@ fun Configuracoes() {
                     fontFamily = PoppinsMedium,
                     fontSize = 16.sp,
                     textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(top = 5.dp)
                 )
                 Spacer(modifier = Modifier.width(45.dp))
                 Button(

@@ -123,7 +123,8 @@ fun FiltroBusca() {
             Spacer(modifier = Modifier.height(15.dp))
             Column(
                 verticalArrangement = Arrangement.Center,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
                     .background(color = Color(0xffD9D9D9))
             ) {
                 Row(
@@ -316,6 +317,31 @@ fun FiltroBusca() {
                             textAlign = TextAlign.Start,
                             modifier = Modifier.width(251.8.dp)
                         )
+                        Row {
+                            Image(
+                                painter = painterResource(id = R.drawable.notafiscal_pdf),
+                                contentDescription = "pdf nota fiscal",
+                                modifier = Modifier
+                                    .size(width = 109.dp, height = 24.dp)
+                                    .clip(CircleShape)
+                            )
+                            Image(
+                                painter = painterResource(id = R.drawable.imagem_pdf),
+                                contentDescription = "pdf imagem",
+                                modifier = Modifier
+                                    .size(width = 109.dp, height = 24.dp)
+                                    .clip(CircleShape)
+                            )
+                            Text(
+                                text = "+3",
+                                fontFamily = RobotoBold,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 12.sp,
+                                color = Color(0xff292929),
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.padding(top = 3.dp)
+                            )
+                        }
                     }
                     Spacer(modifier = Modifier.width(8.dp))
                     Column(
@@ -566,7 +592,8 @@ fun FiltroBusca() {
                 Spacer(modifier = Modifier.width(5.dp))
             }
         }
-        Box(modifier = Modifier.align(Alignment.CenterEnd)
+        Box(modifier = Modifier
+            .align(Alignment.CenterEnd)
             .padding(bottom = 250.dp, end = 15.dp)){
             Column(
                 verticalArrangement = Arrangement.Center,
