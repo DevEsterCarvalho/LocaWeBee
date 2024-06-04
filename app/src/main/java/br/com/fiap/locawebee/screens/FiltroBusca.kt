@@ -317,6 +317,7 @@ fun FiltroBusca() {
                             textAlign = TextAlign.Start,
                             modifier = Modifier.width(251.8.dp)
                         )
+                        Spacer(modifier = Modifier.height(3.dp))
                         Row {
                             Image(
                                 painter = painterResource(id = R.drawable.notafiscal_pdf),
@@ -401,7 +402,7 @@ fun FiltroBusca() {
                             modifier = Modifier.width(230.dp)
                         )
                         val text = buildAnnotatedString {
-                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
                                 append("Olá, tudo bem?\n")
                             }
                             withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
@@ -427,8 +428,7 @@ fun FiltroBusca() {
                     ) {
                         Text(
                             text = "4 Mai",
-                            fontFamily = RobotoBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = RobotoRegular,
                             fontSize = 12.sp,
                             color = Color(0xff292929),
                             modifier = Modifier.padding(bottom = 5.dp)
