@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -118,7 +119,7 @@ fun Calendario3() {
         }
         Box(modifier = Modifier
             .align(Alignment.Center)
-            .padding(bottom = 100.dp)
+            .padding(bottom = 160.dp)
         ) {
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
@@ -127,7 +128,24 @@ fun Calendario3() {
                     .fillMaxWidth()
                     .padding(5.dp)
             ) {
-                Spacer(modifier = Modifier.height(10.dp))
+                Image(
+                    painter = painterResource(id = R.drawable.sacola_de_compras),
+                    contentDescription = "ícone do projeto LocaWeBee",
+                    modifier = Modifier.size(width = 76.dp, height = 76.dp)
+                )
+                Button(
+                    onClick = { /*TODO*/ },
+                    colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
+                    contentPadding = PaddingValues(5.dp),
+                    modifier = Modifier
+                        .size(28.dp)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Add, contentDescription = "ícone add",
+                        tint = Color.White, modifier = Modifier.size(24.dp)
+                    )
+                }
+                Spacer(modifier = Modifier.height(40.dp))
                 OutlinedTextField(
                     value = data,
                     onValueChange = { data = it },
@@ -158,17 +176,11 @@ fun Calendario3() {
                     ),
                     singleLine = true,
                     trailingIcon = {
-                        Button(
-                            onClick = {},
-                            colors = ButtonDefaults.buttonColors(Color.Transparent),
-                            modifier = Modifier.size(50.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.ArrowDropDown,
-                                contentDescription = "icone para definir data",
-                                tint = Color.Black
-                            )
-                        }
+                        Icon(
+                            imageVector = Icons.Default.ArrowDropDown,
+                            contentDescription = "icone para definir data",
+                            tint = Color.Black
+                        )
                     }
                 )
                 Spacer(modifier = Modifier.height(10.dp))
@@ -230,6 +242,26 @@ fun Calendario3() {
                         textAlign = TextAlign.Start,
                         color = Color(0xff626262)
                     ),
+                )
+            }
+            Button(
+                onClick = {},
+                colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .width(220.dp)
+                    .height(31.dp)
+                    .offset(y = 50.dp),
+                shape = RoundedCornerShape(10.dp),
+                contentPadding = PaddingValues(5.dp),
+                elevation = ButtonDefaults.buttonElevation(25.dp)
+            ) {
+                Text(
+                    text = "Salvar Compromisso",
+                    color = Color.White,
+                    fontSize = 16.sp,
+                    fontFamily = PoppinsSemiBold,
+                    textAlign = TextAlign.Center
                 )
             }
         }
