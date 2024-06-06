@@ -121,7 +121,7 @@ fun Intro6() {
                 BoxWithConstraints(
                     modifier = Modifier
                         .height(154.dp)
-                        .width(328.dp)
+                        .width(338.dp)
                         .background(Color(0xffF9F9F9), shape = RoundedCornerShape(13.dp))
                 ) {
                     Image(
