@@ -43,7 +43,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.locawebee.R
-import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
@@ -86,7 +85,7 @@ fun Recompensa6() {
                         Text(
                             text = "Parabéns",
                             fontSize = 14.sp,
-                            fontFamily = PoppinsRegular,
+                            fontFamily = PoppinsSemiBold,
                             textAlign = TextAlign.Center,
                             color = Color.White,
                             modifier = Modifier.width(144.dp)
