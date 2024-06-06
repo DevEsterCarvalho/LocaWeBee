@@ -17,10 +17,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material.icons.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.filled.Search
@@ -29,16 +27,9 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.LocalTextStyle
-import androidx.compose.material3.OutlinedTextField
-import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
@@ -46,7 +37,6 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -56,11 +46,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Calendario3() {
-    var horario by remember { mutableStateOf("") }
-    var compromisso by remember { mutableStateOf("") }
-    var data by remember { mutableStateOf("") }
-
+fun Calendario6() {
     Box(modifier = Modifier
         .background(Color.White)
         .fillMaxSize()
@@ -131,118 +117,25 @@ fun Calendario3() {
                 Image(
                     painter = painterResource(id = R.drawable.sacola_de_compras),
                     contentDescription = "ícone sacola de compra",
-                    modifier = Modifier.size(width = 76.dp, height = 76.dp)
+                    modifier = Modifier.size(width = 187.dp, height = 187.dp)
                 )
-                Button(
-                    onClick = { /*TODO*/ },
-                    colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
-                    contentPadding = PaddingValues(5.dp),
-                    modifier = Modifier
-                        .size(28.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Add, contentDescription = "ícone add",
-                        tint = Color.White, modifier = Modifier.size(24.dp)
-                    )
-                }
                 Spacer(modifier = Modifier.height(40.dp))
-                OutlinedTextField(
-                    value = data,
-                    onValueChange = { data = it },
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = Color(0xffF1F4FF),
-                        unfocusedContainerColor = Color(0xffF1F4FF),
-                        focusedBorderColor = Color.Transparent,
-                        unfocusedBorderColor = Color.Transparent
-                    ),
-                    modifier = Modifier
-                        .width(309.dp)
-                        .height(50.dp),
-                    placeholder = {
-                        Text(
-                            text = "Data: 11 de Maio de 2024 ",
-                            color = Color(0xff626262),
-                            fontSize = 16.sp,
-                            fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Start,
-                            )
-                    },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
+                Row {
+                    Text(text = "11 de Maio de 2024",
+                        color = Color.Black,
+                        fontSize = 24.sp,
                         fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                    singleLine = true,
-                    trailingIcon = {
-                        Icon(
-                            imageVector = Icons.Default.ArrowDropDown,
-                            contentDescription = "icone para definir data",
-                            tint = Color.Black
-                        )
-                    }
-                )
+                        textAlign = TextAlign.Center)
+                }
                 Spacer(modifier = Modifier.height(10.dp))
-                OutlinedTextField(
-                    value = horario,
-                    onValueChange = { horario = it },
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = Color(0xffF1F4FF),
-                        unfocusedContainerColor = Color(0xffF1F4FF),
-                        focusedBorderColor = Color.Transparent,
-                        unfocusedBorderColor = Color.Transparent
-                    ),
-                    modifier = Modifier
-                        .width(309.dp)
-                        .height(50.dp),
-                    placeholder = {
-                        Text(
-                            text = "Definir horário",
-                            color = Color(0xff626262),
-                            fontSize = 16.sp,
-                            fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Start
-                        )
-                    },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
+                Row {
+                    Text(text = "Fazer compras no Shopping",
+                        color = Color.Black,
+                        fontSize = 14.sp,
                         fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                )
-                Spacer(modifier = Modifier.height(10.dp))
-                OutlinedTextField(
-                    value = compromisso,
-                    onValueChange = { compromisso = it },
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = Color(0xffF1F4FF),
-                        unfocusedContainerColor = Color(0xffF1F4FF),
-                        focusedBorderColor = Color.Transparent,
-                        unfocusedBorderColor = Color.Transparent
-                    ),
-                    modifier = Modifier
-                        .width(309.dp)
-                        .height(156.dp),
-                    placeholder = {
-                        Text(
-                            text = "Compromisso",
-                            color = Color(color = 0xff626262),
-                            fontSize = 16.sp,
-                            fontFamily = PoppinsMedium,
-                            textAlign = TextAlign.Center,
-                        )
-                    },
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
-                    textStyle = LocalTextStyle.current.copy(
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                        color = Color(0xff626262)
-                    ),
-                )
+                        textAlign = TextAlign.Center)
+                }
+                Spacer(modifier = Modifier.height(30.dp))
             }
             Button(
                 onClick = {},
@@ -257,7 +150,7 @@ fun Calendario3() {
                 elevation = ButtonDefaults.buttonElevation(25.dp)
             ) {
                 Text(
-                    text = "Salvar Compromisso",
+                    text = "Obrigado!",
                     color = Color.White,
                     fontSize = 16.sp,
                     fontFamily = PoppinsSemiBold,
@@ -476,12 +369,13 @@ fun Calendario3() {
     }
 }
 
+
 @Preview(showBackground = true)
 @Composable
-fun Calendario3Preview() {
+fun Calendario6Preview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Calendario3()
+        Calendario6()
     }
 }

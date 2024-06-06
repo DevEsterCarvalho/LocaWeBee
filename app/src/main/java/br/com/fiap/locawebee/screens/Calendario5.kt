@@ -56,7 +56,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Calendario3() {
+fun Calendario5() {
     var horario by remember { mutableStateOf("") }
     var compromisso by remember { mutableStateOf("") }
     var data by remember { mutableStateOf("") }
@@ -165,7 +165,7 @@ fun Calendario3() {
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
                             textAlign = TextAlign.Start,
-                            )
+                        )
                     },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                     textStyle = LocalTextStyle.current.copy(
@@ -198,7 +198,7 @@ fun Calendario3() {
                         .height(50.dp),
                     placeholder = {
                         Text(
-                            text = "Definir horário",
+                            text = "12:15",
                             color = Color(0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
@@ -228,7 +228,7 @@ fun Calendario3() {
                         .height(156.dp),
                     placeholder = {
                         Text(
-                            text = "Compromisso",
+                            text = "Fazer compras no Shopping",
                             color = Color(color = 0xff626262),
                             fontSize = 16.sp,
                             fontFamily = PoppinsMedium,
@@ -478,10 +478,10 @@ fun Calendario3() {
 
 @Preview(showBackground = true)
 @Composable
-fun Calendario3Preview() {
+fun Calendario5Preview() {
     Surface(
         modifier = Modifier.fillMaxWidth()
     ) {
-        Calendario3()
+        Calendario5()
     }
 }
