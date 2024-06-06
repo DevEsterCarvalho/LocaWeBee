@@ -90,7 +90,7 @@ fun Intro7() {
                         Text(
                             text = "Parabéns",
                             fontSize = 14.sp,
-                            fontFamily = PoppinsRegular,
+                            fontFamily = PoppinsSemiBold,
                             textAlign = TextAlign.Center,
                             color = Color.White,
                             modifier = Modifier.width(144.dp)
