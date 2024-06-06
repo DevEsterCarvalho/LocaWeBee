@@ -86,7 +86,7 @@ fun Progresso2() {
 
                     ) {
                         Text(
-                            text = "Você está quase lá!!",
+                            text = "Você está quase lá!",
                             fontSize = 14.sp,
                             fontFamily = PoppinsRegular,
                             textAlign = TextAlign.Center,
