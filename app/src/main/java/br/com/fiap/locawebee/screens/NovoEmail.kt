@@ -39,6 +39,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -308,7 +309,7 @@ fun EmojiKeyboard(onEmojiSelected: (String) -> Unit) {
     Dialog(onDismissRequest = { onEmojiSelected("") }) {
         Surface(
             shape = RoundedCornerShape(4.dp),
-            color = (Color(color = 0xff1D1F33)),
+            color = Color(0xff1D1F33),
             modifier = Modifier.padding(5.dp)
         ) {
             Column(
@@ -317,18 +318,25 @@ fun EmojiKeyboard(onEmojiSelected: (String) -> Unit) {
                     .wrapContentSize()
                     .width(400.dp)
             ) {
-                val emojis = listOf("😂","👍", "🐝", "❤️", "✈️")
-
+                val emojiImages = listOf(
+                    R.drawable.bee_logo,
+                    R.drawable.colmeia,
+                    R.drawable.ame,
+                    R.drawable.aviao,
+                )
 
                 Row(
                     horizontalArrangement = Arrangement.SpaceAround,
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    emojis.forEach { emoji ->
-                        Text(
-                            text = emoji,
-                            fontSize = 43.sp,
-                            modifier = Modifier.clickable { onEmojiSelected(emoji) }
+                    emojiImages.forEach { emojiRes ->
+                        val painter: Painter = painterResource(id = emojiRes)
+                        Image(
+                            painter = painter,
+                            contentDescription = null,
+                            modifier = Modifier
+                                .size(43.dp)
+                                .clickable { onEmojiSelected(emojiRes.toString()) }
                         )
                     }
                 }
