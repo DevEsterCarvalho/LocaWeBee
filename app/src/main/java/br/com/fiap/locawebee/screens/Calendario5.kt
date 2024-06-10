@@ -51,12 +51,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Calendario5() {
+fun Calendario5(navController: NavController) {
     var horario by remember { mutableStateOf("") }
     var compromisso by remember { mutableStateOf("") }
     var data by remember { mutableStateOf("") }
@@ -476,6 +477,7 @@ fun Calendario5() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun Calendario5Preview() {
@@ -484,4 +486,4 @@ fun Calendario5Preview() {
     ) {
         Calendario5()
     }
-}
+}*/

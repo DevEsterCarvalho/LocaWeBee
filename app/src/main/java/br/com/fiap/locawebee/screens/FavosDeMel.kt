@@ -42,12 +42,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun FavosDeMel() {
+fun FavosDeMel(navController: NavController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)
@@ -422,6 +423,7 @@ fun FavosDeMel() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun FavosDeMelPreview() {
@@ -430,4 +432,4 @@ fun FavosDeMelPreview() {
     ) {
         FavosDeMel()
     }
-}
+}*/

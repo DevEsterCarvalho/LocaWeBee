@@ -45,6 +45,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.OpenSansBold
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
@@ -53,7 +54,7 @@ import br.com.fiap.locawebee.ui.theme.RobotoBold
 import br.com.fiap.locawebee.ui.theme.RobotoRegular
 
 @Composable
-fun FiltroBusca() {
+fun FiltroBusca(navController: NavController) {
     Box(modifier = Modifier
         .background(Color.White)
         .fillMaxSize()
@@ -892,6 +893,7 @@ fun FiltroBusca() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun FiltroBuscaPreview() {
@@ -900,4 +902,4 @@ fun FiltroBuscaPreview() {
     ) {
         FiltroBusca()
     }
-}
+}*/

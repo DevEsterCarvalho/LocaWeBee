@@ -47,6 +47,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
@@ -55,7 +56,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 
 @Composable
-fun NovoEmail() {
+fun NovoEmail(navController: NavController) {
     var email by remember {mutableStateOf("")}
     var copiaEmail by remember { mutableStateOf("") }
     var assunto by remember { mutableStateOf("") }
@@ -346,6 +347,7 @@ fun EmojiKeyboard(onEmojiSelected: (String) -> Unit) {
 }
 
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun NovoEmailPreview() {
@@ -354,4 +356,4 @@ fun NovoEmailPreview() {
     ) {
         NovoEmail()
     }
-}
+}*/

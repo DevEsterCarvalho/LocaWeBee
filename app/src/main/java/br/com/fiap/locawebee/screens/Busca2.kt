@@ -48,6 +48,7 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.OpenSansRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsMedium
@@ -56,7 +57,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 import br.com.fiap.locawebee.ui.theme.RobotoRegular
 
 @Composable
-fun Busca2() {
+fun Busca2(navController: NavController) {
     var busca by remember { mutableStateOf("") }
     Box(modifier = Modifier
         .background(Color.White)
@@ -458,6 +459,7 @@ fun Busca2() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun Busca2Preview() {
@@ -466,4 +468,4 @@ fun Busca2Preview() {
     ) {
         Busca2()
     }
-}
+}*/

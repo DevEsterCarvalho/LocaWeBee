@@ -36,6 +36,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsBold
 import br.com.fiap.locawebee.ui.theme.PoppinsMedium
@@ -43,7 +44,7 @@ import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun CriarConta () {
+fun CriarConta (navController: NavController) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     Box(
@@ -232,6 +233,7 @@ fun CriarConta () {
 
 }
 
+/*
 @Preview(showSystemUi = true)
 @Composable
 fun CriarContaPreview() {
@@ -240,4 +242,4 @@ fun CriarContaPreview() {
     ) {
         CriarConta()
     }
-}
+}*/

@@ -41,11 +41,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Recompensa2() {
+fun Recompensa2(navController: NavController) {
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Color.White)
@@ -356,6 +357,7 @@ fun Recompensa2() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun Recompensa2Preview() {
@@ -364,4 +366,4 @@ fun Recompensa2Preview() {
     ) {
         Recompensa2()
     }
-}
+}*/

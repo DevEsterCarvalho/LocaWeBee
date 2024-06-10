@@ -42,12 +42,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Tutorial5() {
+fun Tutorial5(navController: NavController) {
     Box(modifier = Modifier
         .background(Color.White)
         .fillMaxSize()
@@ -444,6 +445,7 @@ fun Tutorial5() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun Tutorial5Preview() {
@@ -452,4 +454,4 @@ fun Tutorial5Preview() {
     ) {
         Tutorial5()
     }
-}
+}*/

@@ -44,13 +44,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.LatoBold
 import br.com.fiap.locawebee.ui.theme.LatoRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
-fun Calendario() {
+fun Calendario(navController: NavController) {
     Box(modifier = Modifier
         .background(Color.White)
         .fillMaxSize()
@@ -596,6 +597,7 @@ fun Calendario() {
     }
 }
 
+/*
 @Preview(showBackground = true)
 @Composable
 fun CalendarioPreview() {
@@ -604,4 +606,4 @@ fun CalendarioPreview() {
     ) {
         Calendario()
     }
-}
+}*/
