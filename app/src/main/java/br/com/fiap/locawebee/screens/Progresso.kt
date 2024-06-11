@@ -37,13 +37,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
-import br.com.fiap.locawebee.ui.theme.PoppinsMedium
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
@@ -66,7 +68,7 @@ fun Progresso(navController: NavController) {
             )
             Column(
                 verticalArrangement = Arrangement.Top,
-                modifier = Modifier.background(Color(0xff1F41BB))
+                modifier = Modifier.background(Color.White)
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -85,23 +87,29 @@ fun Progresso(navController: NavController) {
 
                     ) {
                         Text(
-                            text = "Parabéns",
+                            text = "Você está quase lá!",
                             fontSize = 14.sp,
                             fontFamily = PoppinsRegular,
                             textAlign = TextAlign.Center,
-                            color = Color.White,
+                            color = Color.Black,
                             modifier = Modifier.width(144.dp)
                         )
-                        LinearProgressIndicator(
-                            progress = 1f,
+                        Button(onClick = {navController.navigate("Progresso")},
+                            colors = ButtonDefaults.buttonColors(Color.Transparent),
                             modifier = Modifier
-                                .height(20.dp)
-                                .width(230.dp)
-                                .align(Alignment.CenterHorizontally),
-                            trackColor = Color(0xffF1F4FF),
-                            color = Color(0xffE2AA44),
-                            strokeCap = StrokeCap.Round
-                        )
+                        ) {
+                            LinearProgressIndicator(
+                                progress = 0.6f,
+                                modifier = Modifier
+                                    .height(20.dp)
+                                    .width(230.dp),
+                                    //.align(Alignment.CenterHorizontally),
+                                trackColor = Color(0xffF1F4FF),
+                                color = Color(0xffE2AA44),
+                                strokeCap = StrokeCap.Round
+                            )
+                        }
+
                     }
                 }
                 Box(
@@ -114,17 +122,17 @@ fun Progresso(navController: NavController) {
             BoxWithConstraints(
                 modifier = Modifier
                     .align(Alignment.Center)
-                    .height(349.dp)
+                    .height(418.dp)
                     .width(338.dp)
                     .background(Color(0xffF9F9F9), shape = RoundedCornerShape(13.dp))
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.bee_logo),
-                    contentDescription = "icone locawebee",
+                    painter = painterResource(id = R.drawable.premio),
+                    contentDescription = "icone premio",
                     modifier = Modifier
-                        .size(width = 197.33.dp, height = 157.03.dp)
+                        .size(width = 109.dp, height = 109.dp)
                         .align(Alignment.TopCenter)
-                        .offset(y = (-100).dp)
+                        .offset(y = (-60).dp)
                 )
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally,
@@ -134,8 +142,9 @@ fun Progresso(navController: NavController) {
                         .padding(top = 60.dp)
                 ) {
                     Text(
-                        text = "Parabéns pelo\n" +
-                                "sua organização!",
+                        text = "Organize sua\n" +
+                                "caixa de entrada\n" +
+                                "e ganhe prêmios!",
                         fontSize = 24.sp,
                         fontFamily = PoppinsSemiBold,
                         textAlign = TextAlign.Center,
@@ -143,26 +152,39 @@ fun Progresso(navController: NavController) {
                         modifier = Modifier
                             .padding(horizontal = 16.dp)
                     )
-                    Text(
-                        text = "Uma caixa de entrada organizada, te estimula a replicar em outras\n" +
-                                "áreas da vida pessoal",
-                        fontSize = 15.sp,
-                        fontFamily = PoppinsRegular,
-                        textAlign = TextAlign.Center,
-                        color = Color(0xff1D1F33),
-                        modifier = Modifier.padding(top = 10.dp)
-                    )
-                    Text(
-                        text = "Meta concluida!",
-                        fontSize = 20.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Center,
-                        color = Color(0xff1D1F33),
-                        modifier = Modifier.padding(top = 15.dp)
-                    )
                     Spacer(modifier = Modifier.height(15.dp))
+                }
+                Column(
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Bottom,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(bottom = 30.dp)
+                ) {
+                    Row {
+                        Text(
+                            text = buildAnnotatedString {
+                                withStyle(style = SpanStyle(fontFamily = PoppinsSemiBold)) {
+                                    append("Falta pouco\n")
+                                }
+                                withStyle(style = SpanStyle(fontFamily = PoppinsRegular)){
+                                    append("Vamos lá")
+                                }
+                            },
+                            fontSize = 20.sp,
+                            textAlign = TextAlign.Center,
+                            color = Color.Black,
+                            modifier = Modifier
+                                .padding(horizontal = 16.dp, vertical = 20.dp)
+                        )
+                        Image(
+                            painter = painterResource(id = R.drawable.bee_logo),
+                            contentDescription = "ícone do projeto LocaWeBee",
+                            modifier = Modifier.size(width = 99.dp, height = 84.dp)
+                        )
+                    }
                     LinearProgressIndicator(
-                        progress = 1f,
+                        progress = 0.6f,
                         modifier = Modifier
                             .height(20.dp)
                             .width(230.dp)
@@ -171,6 +193,7 @@ fun Progresso(navController: NavController) {
                         color = Color(0xffE2AA44),
                         strokeCap = StrokeCap.Round
                     )
+                    Spacer(modifier = Modifier.height(15.dp))
                 }
                 Button(
                     onClick = {},
@@ -185,7 +208,7 @@ fun Progresso(navController: NavController) {
                     elevation = ButtonDefaults.buttonElevation(25.dp)
                 ) {
                     Text(
-                        text = "Obrigado!",
+                        text = "Ok, vamos lá!",
                         color = Color.White,
                         fontSize = 16.sp,
                         fontFamily = PoppinsSemiBold,
@@ -328,7 +351,7 @@ fun Progresso(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -340,7 +363,7 @@ fun Progresso(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -352,7 +375,7 @@ fun Progresso(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -364,7 +387,7 @@ fun Progresso(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -380,8 +403,8 @@ fun Progresso(navController: NavController) {
     }
 }
 
-/*
-@Preview(showBackground = true)
+
+/*@Preview(showBackground = true)
 @Composable
 fun ProgressoPreview() {
     Surface(

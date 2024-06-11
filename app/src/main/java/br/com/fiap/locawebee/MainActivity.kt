@@ -26,6 +26,8 @@ import br.com.fiap.locawebee.screens.Calendario6
 import br.com.fiap.locawebee.screens.Calendario7
 import br.com.fiap.locawebee.screens.Calendario8
 import br.com.fiap.locawebee.screens.ComprarItem
+import br.com.fiap.locawebee.screens.Configuracoes
+import br.com.fiap.locawebee.screens.CriarConta
 import br.com.fiap.locawebee.screens.Descricao
 import br.com.fiap.locawebee.screens.FavosDeMel
 import br.com.fiap.locawebee.screens.FiltroBusca
@@ -98,6 +100,8 @@ class MainActivity : ComponentActivity() {
                         composable(route = "Calendario7") { Calendario7(navController) }
                         composable(route = "Calendario8") { Calendario8(navController) }
                         composable(route = "ComprarItem") { ComprarItem(navController) }
+                        composable(route = "Configuracoes") { Configuracoes(navController) }
+                        composable(route = "CriarConta") { CriarConta(navController) }
                         composable(route = "Descricao") { Descricao(navController) }
                         composable(route = "FavosDeMel") { FavosDeMel(navController) }
                         composable(route = "FiltroBusca") { FiltroBusca(navController) }
@@ -119,11 +123,11 @@ class MainActivity : ComponentActivity() {
                         composable(route = "ModoDark") { ModoDark(navController) }
                         composable(route = "NovoEmail") { NovoEmail(navController) }
                         composable(route = "NovoEmail2") { NovoEmail2(navController) }
-                        composable(route = "OfflineMensagemPrincipal") { OfflineMensagem2(navController) }
+                        composable(route = "OfflineMensagem2") { OfflineMensagem2(navController) }
                         composable(route = "OfflineMensagem") { OfflineMensagem(navController) }
                         composable(route = "Paixao") { Paixao(navController) }
                         composable(route = "PrimeiroAcesso") { PrimeiroAcesso(navController) }
-                        composable(route = "Progresso") { Progresso(navController) }
+                        //composable(route = "Progresso") { Progresso(navController) }
                         composable(route = "Progresso2") { Progresso2(navController) }
                         composable(route = "Recompensa") { Recompensa(navController) }
                         composable(route = "Recompensa2") { Recompensa2(navController) }

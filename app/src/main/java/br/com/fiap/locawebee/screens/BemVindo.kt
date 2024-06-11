@@ -109,7 +109,7 @@ fun BemVindo(navController: NavController) {
 
             ){
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Login")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     modifier = Modifier
                         .width(144.dp)
@@ -128,7 +128,7 @@ fun BemVindo(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.width(16.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CriarConta")},
                     colors = ButtonDefaults.buttonColors(Color.White),
                     modifier = Modifier
                         .width(144.dp)

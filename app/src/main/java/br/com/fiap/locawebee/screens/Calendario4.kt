@@ -1,5 +1,6 @@
 package br.com.fiap.locawebee.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -75,7 +76,7 @@ fun Calendario4(navController: NavController) {
                     .fillMaxWidth()
             ) {
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Calendario3")},
                     colors = ButtonDefaults.buttonColors(Color.White)
                 ) {
                     Icon(
@@ -119,21 +120,46 @@ fun Calendario4(navController: NavController) {
                         .fillMaxWidth()
                         .width(310.dp)
                 ){
-                    Image(
-                        painter = painterResource(id = R.drawable.sacola_de_compras),
-                        contentDescription = "ícone sacola de compra",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.tesoura),
-                        contentDescription = "ícone tesoura",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.aviao),
-                        contentDescription = "ícone aviao",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ){
+                        Image(
+                            painter = painterResource(id = R.drawable.sacola_de_compras),
+                            contentDescription = "ícone sacola de compra",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                            .border(BorderStroke(width = 2.dp, color = Color.Black))
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.tesoura),
+                            contentDescription = "ícone tesoura",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.aviao),
+                            contentDescription = "ícone aviao",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(30.dp))
                 Row(horizontalArrangement = Arrangement.SpaceEvenly,
@@ -141,21 +167,45 @@ fun Calendario4(navController: NavController) {
                         .fillMaxWidth()
                         .width(310.dp)
                 ){
-                    Image(
-                        painter = painterResource(id = R.drawable.estrela),
-                        contentDescription = "ícone estrela",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.lupa),
-                        contentDescription = "ícone lupa",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.tenis_corrida),
-                        contentDescription = "ícone tenis corrida",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.estrela),
+                            contentDescription = "ícone estrela",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.lupa),
+                            contentDescription = "ícone lupa",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.tenis_corrida),
+                            contentDescription = "ícone tenis corrida",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(30.dp))
                 Row(horizontalArrangement = Arrangement.SpaceEvenly,
@@ -163,21 +213,45 @@ fun Calendario4(navController: NavController) {
                         .fillMaxWidth()
                         .width(310.dp)
                 ){
-                    Image(
-                        painter = painterResource(id = R.drawable.mapa),
-                        contentDescription = "ícone mapa",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.carro_corrida),
-                        contentDescription = "ícone carro de corrida",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.carrinho_compra),
-                        contentDescription = "ícone carrinho de compra",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.mapa),
+                            contentDescription = "ícone mapa",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.carro_corrida),
+                            contentDescription = "ícone carro de corrida",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.carrinho_compra),
+                            contentDescription = "ícone carrinho de compra",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(30.dp))
                 Row(horizontalArrangement = Arrangement.SpaceEvenly,
@@ -185,21 +259,45 @@ fun Calendario4(navController: NavController) {
                         .fillMaxWidth()
                         .width(310.dp)
                 ){
-                    Image(
-                        painter = painterResource(id = R.drawable.garrafa_agua),
-                        contentDescription = "ícone garrafa de agua",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.feijoada),
-                        contentDescription = "ícone feijoada",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.academia),
-                        contentDescription = "ícone academia",
-                        modifier = Modifier.size(width = 42.dp, height = 42.dp)
-                    )
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.garrafa_agua),
+                            contentDescription = "ícone garrafa de agua",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.feijoada),
+                            contentDescription = "ícone feijoada",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
+                    Button(
+                        onClick = { /*TODO*/ },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        modifier = Modifier
+                            .size(70.dp)
+                    ) {
+                        Image(
+                            painter = painterResource(id = R.drawable.academia),
+                            contentDescription = "ícone academia",
+                            modifier = Modifier.size(width = 42.dp, height = 42.dp)
+                        )
+                    }
                 }
                 Spacer(modifier = Modifier.height(50.dp))
                 Box(
@@ -211,7 +309,7 @@ fun Calendario4(navController: NavController) {
                 )
             }
             Button(
-                onClick = {},
+                onClick = {navController.navigate("Calendario5")},
                 colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
@@ -244,7 +342,7 @@ fun Calendario4(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("NovoEmail")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -390,7 +488,7 @@ fun Calendario4(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -402,7 +500,7 @@ fun Calendario4(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -414,7 +512,7 @@ fun Calendario4(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -426,7 +524,7 @@ fun Calendario4(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

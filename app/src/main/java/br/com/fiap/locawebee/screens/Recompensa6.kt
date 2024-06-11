@@ -59,7 +59,7 @@ fun Recompensa6(navController: NavController) {
         ) {
             Image(
                 painter = painterResource(id = R.drawable.fundo_premio),
-                contentDescription = null,
+                contentDescription = "fundo premio",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
@@ -91,16 +91,21 @@ fun Recompensa6(navController: NavController) {
                             color = Color.White,
                             modifier = Modifier.width(144.dp)
                         )
-                        LinearProgressIndicator(
-                            progress = 1f,
+                        Button(onClick = {navController.navigate("Progresso2")},
+                            colors = ButtonDefaults.buttonColors(Color.Transparent),
                             modifier = Modifier
-                                .height(20.dp)
-                                .width(230.dp)
-                                .align(Alignment.CenterHorizontally),
-                            trackColor = Color(0xffF1F4FF),
-                            color = Color(0xffE2AA44),
-                            strokeCap = StrokeCap.Round
-                        )
+                        ) {
+                            LinearProgressIndicator(
+                                progress = 1f,
+                                modifier = Modifier
+                                    .height(20.dp)
+                                    .width(230.dp),
+                                    //.align(Alignment.CenterHorizontally),
+                                trackColor = Color(0xffF1F4FF),
+                                color = Color(0xffE2AA44),
+                                strokeCap = StrokeCap.Round
+                            )
+                        }
                     }
                 }
                 Box(
@@ -119,7 +124,7 @@ fun Recompensa6(navController: NavController) {
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.tema_ouro),
-                    contentDescription = "icone paixao",
+                    contentDescription = "icone tema ouro",
                     modifier = Modifier
                         .size(width = 180.dp, height = 195.dp)
                         .offset(y = (-110).dp)
@@ -152,7 +157,7 @@ fun Recompensa6(navController: NavController) {
                     )
                 }
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("TemaOuro")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     modifier = Modifier
                         .align(Alignment.BottomCenter)
@@ -307,7 +312,7 @@ fun Recompensa6(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -319,7 +324,7 @@ fun Recompensa6(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -331,7 +336,7 @@ fun Recompensa6(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -343,7 +348,7 @@ fun Recompensa6(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

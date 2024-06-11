@@ -78,7 +78,7 @@ fun Calendario(navController: NavController) {
                     .padding(top = 30.dp)
                     .fillMaxWidth()
             ){
-                Button(onClick = {},
+                Button(onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color.White)
                 ){
                     Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar a uma página",
@@ -366,7 +366,7 @@ fun Calendario(navController: NavController) {
                 }
             }
             Button(
-                onClick = {},
+                onClick = {navController.navigate("Calendario2")},
                 colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
@@ -399,7 +399,7 @@ fun Calendario(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("NovoEmail2")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -545,7 +545,7 @@ fun Calendario(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -557,7 +557,7 @@ fun Calendario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -569,7 +569,7 @@ fun Calendario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -581,7 +581,7 @@ fun Calendario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

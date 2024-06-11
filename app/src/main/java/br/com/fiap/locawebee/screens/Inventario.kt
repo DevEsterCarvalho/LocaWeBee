@@ -30,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -207,6 +208,7 @@ fun Inventario(navController: NavController) {
                         contentDescription = "ícone favo de mel",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
+                            .scale(scaleX = 1f, scaleY = 1.7f)
                     )
                 }
             }
@@ -242,6 +244,7 @@ fun Inventario(navController: NavController) {
                         contentDescription = "ícone mel melado",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
+                            .scale(scaleX = 1f, scaleY = 1.6f)
                     )
                 }
             }
@@ -277,7 +280,7 @@ fun Inventario(navController: NavController) {
                         contentDescription = "ícone paixão",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
-
+                            .scale(scaleX = 1f, scaleY = 1.4f)
                     )
                 }
             }
@@ -415,7 +418,7 @@ fun Inventario(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -427,7 +430,7 @@ fun Inventario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -439,7 +442,7 @@ fun Inventario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -451,7 +454,7 @@ fun Inventario(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -467,8 +470,8 @@ fun Inventario(navController: NavController) {
     }
 }
 
-/*
-@Preview(showBackground = true)
+
+/*@Preview(showBackground = true)
 @Composable
 fun InventarioPreview() {
     Surface(

@@ -30,6 +30,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
@@ -90,7 +91,7 @@ fun LojaPontos(navController: NavController) {
                 )
                 Image(
                     painter = painterResource(id = R.drawable.medalha),
-                    contentDescription = "ícone do projeto LocaWeBee",
+                    contentDescription = "ícone medalha",
                     modifier = Modifier.size(width = 17.dp, height = 17.dp)
 
                 )
@@ -103,7 +104,7 @@ fun LojaPontos(navController: NavController) {
                 )
                 Image(
                     painter = painterResource(id = R.drawable.premio),
-                    contentDescription = "ícone do projeto LocaWeBee",
+                    contentDescription = "ícone premio",
                     modifier = Modifier.size(width = 17.dp, height = 17.dp)
 
                 )
@@ -147,13 +148,20 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Emoji de abelha ",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("ComprarItem")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ) {
+                        Text(
+                            text = "Emoji de abelha ",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.bee_logo),
@@ -195,13 +203,20 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Emoji de abelha ",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("Recomempensa2")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ){
+                        Text(
+                            text = "Emoji favo de Mel",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.colmeia),
@@ -243,20 +258,28 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Plano de fundo\n" +
-                                "Favos de Mel",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("Recomempensa3")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ){
+                        Text(
+                            text = "Plano de fundo\n" +
+                                    "Favos de Mel",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.favo_de_mel),
                         contentDescription = "ícone favo de mel",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
+                            .scale(scaleX = 1f, scaleY = 1.7f)
                     )
                 }
             }
@@ -292,20 +315,28 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Plano de fundo\n" +
-                                "Mel Melado",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("Recomempensa4")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ){
+                        Text(
+                            text = "Plano de fundo\n" +
+                                    "Mel Melado",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.mel_melado),
                         contentDescription = "ícone mel melado",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
+                            .scale(scaleX = 1f, scaleY = 1.6f)
                     )
                 }
             }
@@ -341,21 +372,28 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Tema de E-mail\n" +
-                                "Paixão",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("Recomempensa5")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ){
+                        Text(
+                            text = "Tema de E-mail\n" +
+                                    "Romântico",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
                         painter = painterResource(id = R.drawable.paixao),
                         contentDescription = "ícone paixão",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
-
+                            .scale(scaleX = 1f, scaleY = 1.4f)
                     )
                 }
             }
@@ -391,20 +429,27 @@ fun LojaPontos(navController: NavController) {
                             .clip(RoundedCornerShape(15.dp))
 
                     )
-                    Text(
-                        text = "Tema de E-mail\n Ouro",
-                        color = (Color(0xff1D1F33)),
-                        fontFamily = PoppinsMedium,
-                        fontSize = 16.sp,
-                        textAlign = TextAlign.Center,
-                    )
+                    Button(
+                        onClick = {navController.navigate("Recomempensa6")},
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
+                        shape = RoundedCornerShape(4.dp),
+                    ){
+                        Text(
+                            text = "Tema de E-mail\n Ouro",
+                            color = (Color(0xff1D1F33)),
+                            fontFamily = PoppinsMedium,
+                            fontSize = 16.sp,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     Image(
-                        painter = painterResource(id = R.drawable.favo_de_mel),
-                        contentDescription = "ícone tema favo de mel",
+                        painter = painterResource(id = R.drawable.tema_ouro),
+                        contentDescription = "ícone tema ouro",
                         modifier = Modifier.size(width = 37.dp, height = 40.dp)
                             .clip(RoundedCornerShape(15.dp))
-
+                            .scale(scaleX = 1f, scaleY = 1.7f)
                     )
                 }
             }
@@ -413,7 +458,7 @@ fun LojaPontos(navController: NavController) {
             .padding(top = 500.dp)
         ) {
             Button(
-                onClick = {},
+                onClick = {navController.navigate("Inventario")},
                 colors = ButtonDefaults.buttonColors(Color(color = 0xff1F41BB)),
                 contentPadding = PaddingValues(5.dp),
                 shape = RoundedCornerShape(4.dp),
@@ -563,7 +608,7 @@ fun LojaPontos(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -575,7 +620,7 @@ fun LojaPontos(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -587,7 +632,7 @@ fun LojaPontos(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -599,7 +644,7 @@ fun LojaPontos(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -615,8 +660,8 @@ fun LojaPontos(navController: NavController) {
     }
 }
 
-/*
-@Preview(showBackground = true)
+
+/*@Preview(showBackground = true)
 @Composable
 fun LojaPontosPreview() {
     Surface(

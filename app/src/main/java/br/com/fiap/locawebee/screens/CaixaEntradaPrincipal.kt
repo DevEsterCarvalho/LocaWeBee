@@ -110,7 +110,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
                     modifier = Modifier
                         .width(100.dp)
@@ -139,7 +139,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.width(10.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaOutros")},
                     colors = ButtonDefaults.buttonColors(Color.White),
                     modifier = Modifier
                         .width(100.dp)
@@ -156,7 +156,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.width(40.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Lixeira")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -185,7 +185,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
             )
         }
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {navController.navigate("CaixaEntradaOutros")},
             colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
             contentPadding = PaddingValues(5.dp),
             modifier = Modifier
@@ -193,7 +193,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                 .align(Alignment.CenterStart)
         ) {
             Icon(
-                imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "ícone add",
+                imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "ícone abrir suporte",
                 tint = Color.White,
                 modifier = Modifier
                     .size(50.dp)
@@ -212,7 +212,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("NovoEmail")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -358,7 +358,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -370,7 +370,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -382,7 +382,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -394,7 +394,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

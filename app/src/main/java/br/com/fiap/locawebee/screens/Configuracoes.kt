@@ -89,7 +89,7 @@ fun Configuracoes(navController: NavController) {
                 )
                 Spacer(modifier = Modifier.width(45.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xffF1F4FF)),
                     shape = RoundedCornerShape(4.dp),
                     contentPadding = PaddingValues(5.dp),
@@ -110,7 +110,7 @@ fun Configuracoes(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.width(10.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("ModoDark")},
                     colors = ButtonDefaults.buttonColors(Color(0xff3F3F3F)),
                     shape = RoundedCornerShape(4.dp),
                     contentPadding = PaddingValues(5.dp),
@@ -441,7 +441,7 @@ fun Configuracoes(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -453,7 +453,7 @@ fun Configuracoes(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -465,7 +465,7 @@ fun Configuracoes(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -477,7 +477,7 @@ fun Configuracoes(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

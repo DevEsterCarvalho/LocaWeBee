@@ -182,7 +182,7 @@ fun CriarConta (navController: NavController) {
                 )
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Login")},
                     colors = ButtonDefaults.buttonColors(Color(color = 0xffFBBC24)),
                     shape = RoundedCornerShape(10.dp),
                     contentPadding = PaddingValues(5.dp),
@@ -201,7 +201,7 @@ fun CriarConta (navController: NavController) {
                 }
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Descricao")},
                     colors = ButtonDefaults.buttonColors(Color(color = 0xff1F41BB)),
                     shape = RoundedCornerShape(10.dp),
                     contentPadding = PaddingValues(5.dp),

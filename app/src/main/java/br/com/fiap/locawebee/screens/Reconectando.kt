@@ -108,7 +108,7 @@ fun Reconectando(navController: NavController) {
 
             ){
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     modifier = Modifier
                         .width(144.dp)

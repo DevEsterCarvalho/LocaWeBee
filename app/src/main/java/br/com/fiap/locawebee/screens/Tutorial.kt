@@ -102,7 +102,7 @@ fun Tutorial(navController: NavController) {
                             .padding(horizontal = 16.dp, vertical = 5.dp)
                     )
                     Button(
-                        onClick = {},
+                        onClick = {navController.navigate("Tutorial1")},
                         colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                         modifier = Modifier
                             .width(220.dp)
@@ -122,7 +122,7 @@ fun Tutorial(navController: NavController) {
                     }
                     Spacer(modifier = Modifier.height(15.dp))
                     Button(
-                        onClick = {},
+                        onClick = {navController.navigate("PrimeiroAcesso")},
                         colors = ButtonDefaults.buttonColors(Color.White),
                         modifier = Modifier
                             .width(220.dp)
@@ -285,7 +285,7 @@ fun Tutorial(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -297,7 +297,7 @@ fun Tutorial(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -309,7 +309,7 @@ fun Tutorial(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -321,7 +321,7 @@ fun Tutorial(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

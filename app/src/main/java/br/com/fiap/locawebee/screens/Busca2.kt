@@ -86,7 +86,7 @@ fun Busca2(navController: NavController) {
                     .padding(top = 20.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color.White)
                 ) {
                     Icon(

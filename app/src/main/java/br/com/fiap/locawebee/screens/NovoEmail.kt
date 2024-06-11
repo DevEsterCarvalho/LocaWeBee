@@ -2,7 +2,6 @@ package br.com.fiap.locawebee.screens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -125,7 +124,7 @@ fun NovoEmail(navController: NavController) {
             ) {
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -278,7 +277,7 @@ fun NovoEmail(navController: NavController) {
             .padding(top = 100.dp)
         ) {
             Button(
-                onClick = { showEmojiKeyboard = true },
+                onClick = {navController.navigate("NovoEmail2")},
                 colors = ButtonDefaults.buttonColors(Color(color = 0xff1F41BB)),
                 contentPadding = PaddingValues(5.dp),
                 shape = RoundedCornerShape(4.dp),
@@ -295,57 +294,8 @@ fun NovoEmail(navController: NavController) {
                 )
             }
         }
-
-        if (showEmojiKeyboard) {
-            EmojiKeyboard(onEmojiSelected = { emoji ->
-                text += emoji
-                showEmojiKeyboard = false
-            })
-        }
     }
 }
-
-@Composable
-fun EmojiKeyboard(onEmojiSelected: (String) -> Unit) {
-    Dialog(onDismissRequest = { onEmojiSelected("") }) {
-        Surface(
-            shape = RoundedCornerShape(4.dp),
-            color = Color(0xff1D1F33),
-            modifier = Modifier.padding(5.dp)
-        ) {
-            Column(
-                modifier = Modifier
-                    .padding(10.dp)
-                    .wrapContentSize()
-                    .width(400.dp)
-            ) {
-                val emojiImages = listOf(
-                    R.drawable.bee_logo,
-                    R.drawable.colmeia,
-                    R.drawable.ame,
-                    R.drawable.aviao,
-                )
-
-                Row(
-                    horizontalArrangement = Arrangement.SpaceAround,
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-                    emojiImages.forEach { emojiRes ->
-                        val painter: Painter = painterResource(id = emojiRes)
-                        Image(
-                            painter = painter,
-                            contentDescription = null,
-                            modifier = Modifier
-                                .size(43.dp)
-                                .clickable { onEmojiSelected(emojiRes.toString()) }
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
 
 /*
 @Preview(showBackground = true)

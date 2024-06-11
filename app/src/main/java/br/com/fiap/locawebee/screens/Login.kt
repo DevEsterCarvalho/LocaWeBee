@@ -161,7 +161,7 @@ fun Login(navController: NavController) {
                 )
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("PrimeiroAcesso")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     shape = RoundedCornerShape(10.dp),
                     contentPadding = PaddingValues(5.dp),
@@ -180,7 +180,7 @@ fun Login(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.height(20.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CriarConta")},
                     colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
                     shape = RoundedCornerShape(10.dp),
                     contentPadding = PaddingValues(5.dp),

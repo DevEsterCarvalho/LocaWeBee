@@ -128,7 +128,7 @@ fun OfflineMensagem(navController: NavController) {
             )
         }
         Button(
-            onClick = { /*TODO*/ },
+            onClick = {navController.navigate("CaixaEntradaOutrosModoOffline")},
             colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
             contentPadding = PaddingValues(5.dp),
             modifier = Modifier
@@ -136,7 +136,7 @@ fun OfflineMensagem(navController: NavController) {
                 .align(Alignment.CenterStart)
         ) {
             Icon(
-                imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "ícone add",
+                imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "ícone abrir suporte",
                 tint = Color.White,
                 modifier = Modifier
                     .size(50.dp)
@@ -184,7 +184,7 @@ fun OfflineMensagem(navController: NavController) {
                     modifier = Modifier.padding(bottom = 30.dp)
                 )
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Reconectando2")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     modifier = Modifier
                         .width(220.dp)
@@ -203,7 +203,7 @@ fun OfflineMensagem(navController: NavController) {
                 }
                 Spacer(modifier = Modifier.height(12.dp))
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaPrincipalModoOffline")},
                     colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
                     modifier = Modifier
                         .width(220.dp)
@@ -235,7 +235,7 @@ fun OfflineMensagem(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("OfflineMensagem2")},
                     colors = ButtonDefaults.buttonColors(Color(0x4D1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -381,7 +381,7 @@ fun OfflineMensagem(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -393,7 +393,7 @@ fun OfflineMensagem(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -405,7 +405,7 @@ fun OfflineMensagem(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -417,7 +417,7 @@ fun OfflineMensagem(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

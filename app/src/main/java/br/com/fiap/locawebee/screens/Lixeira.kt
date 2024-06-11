@@ -123,7 +123,7 @@ fun Lixeira(navController: NavController) {
                         modifier = Modifier
                         .padding(top = 10.dp)
                 ){
-                    Button(onClick = { /*TODO*/ },
+                    Button(onClick = {navController.navigate("CaixaEntradaPrincipal")},
                         colors = ButtonDefaults.buttonColors(Color.White)
                     ){
                         Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar a uma página",
@@ -302,7 +302,7 @@ fun Lixeira(navController: NavController) {
 
             ){
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Lixeira2")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     modifier = Modifier
                         .width(220.dp)
@@ -334,7 +334,7 @@ fun Lixeira(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("NovoEmail")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -480,7 +480,7 @@ fun Lixeira(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -492,7 +492,7 @@ fun Lixeira(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca") },
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -504,7 +504,7 @@ fun Lixeira(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -516,7 +516,7 @@ fun Lixeira(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

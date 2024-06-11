@@ -1,6 +1,7 @@
 package br.com.fiap.locawebee.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -46,7 +48,9 @@ import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
 fun Busca(navController: NavController) {
-    var busca by remember { mutableStateOf("") }
+    var data by remember { mutableStateOf(false)}
+    var categoria by remember { mutableStateOf(false)}
+    var cor by remember { mutableStateOf(false)}
     Box(modifier = Modifier
         .background(Color.White)
         .fillMaxSize()
@@ -72,7 +76,7 @@ fun Busca(navController: NavController) {
                 modifier = Modifier
                     .padding(top = 20.dp)
             ){
-                Button(onClick = { /*TODO*/ },
+                Button(onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color.White)
                 ){
                     Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar a uma página",
@@ -98,36 +102,23 @@ fun Busca(navController: NavController) {
                     .align(Alignment.CenterHorizontally)
             )
             Spacer(modifier = Modifier.height(25.dp))
-            OutlinedTextField(
-                value = busca,
-                onValueChange = { busca = it },
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedContainerColor = Color(0xffF1F4FF),
-                    unfocusedContainerColor = Color(0xffF1F4FF),
-                    focusedBorderColor = Color.Transparent,
-                    unfocusedBorderColor = Color.Transparent
-                ),
+            Button(
+                onClick = {navController.navigate("Busca2")},
+                colors = ButtonDefaults.buttonColors(Color(0xffF1F4FF)),
+                shape = RoundedCornerShape(4.dp),
                 modifier = Modifier
                     .width(309.dp)
-                    .height(50.dp),
-                placeholder = {
-                    Text(
-                        text = "Palavra chave ",
-                        color = Color(0xff626262),
-                        fontSize = 16.sp,
-                        fontFamily = PoppinsMedium,
-                        textAlign = TextAlign.Start,
-                    )
-                },
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-                textStyle = LocalTextStyle.current.copy(
+                    .height(40.dp),
+            ){
+                Text(
+                    text = "Palavra chave ",
+                    color = Color(0xff626262),
                     fontSize = 16.sp,
                     fontFamily = PoppinsMedium,
                     textAlign = TextAlign.Start,
-                    color = Color(0xff626262)
-                ),
-                singleLine = true,
-            )
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Start,
@@ -136,10 +127,10 @@ fun Busca(navController: NavController) {
                     .padding(top = 10.dp, start = 30.dp, end = 30.dp)
             ) {
                 Checkbox(
-                    checked = false,
-                    onCheckedChange = {},
+                    checked = data,
+                    onCheckedChange = {data = it},
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Color.White,
+                        checkedColor = Color.Black,
                         uncheckedColor = Color.Black
                     )
                 )
@@ -163,10 +154,10 @@ fun Busca(navController: NavController) {
                     .padding(top = 10.dp, start = 30.dp, end = 30.dp)
             ) {
                 Checkbox(
-                    checked = false,
-                    onCheckedChange = {},
+                    checked = categoria,
+                    onCheckedChange = {categoria = it},
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Color.White,
+                        checkedColor = Color.Black,
                         uncheckedColor = Color.Black
                     )
                 )
@@ -190,10 +181,10 @@ fun Busca(navController: NavController) {
                     .padding(top = 10.dp, start = 30.dp, end = 30.dp)
             ) {
                 Checkbox(
-                    checked = false,
-                    onCheckedChange = {},
+                    checked = cor,
+                    onCheckedChange = {cor = it},
                     colors = CheckboxDefaults.colors(
-                        checkedColor = Color.White,
+                        checkedColor = Color.Black,
                         uncheckedColor = Color.Black
                     )
                 )
@@ -213,8 +204,8 @@ fun Busca(navController: NavController) {
     }
 }
 
-/*
-@Preview(showBackground = true)
+
+/*@Preview(showBackground = true)
 @Composable
 fun BuscaPreview() {
     Surface(

@@ -137,7 +137,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     .padding(end = 50.dp)
             ) {
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaPrincipalModoOffline")},
                     colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
                     modifier = Modifier
                         .width(100.dp)
@@ -153,7 +153,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     )
                 }
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("CaixaEntradaOutrosModoOffline")},
                     colors = ButtonDefaults.buttonColors(Color(0xffFFFFFF)),
                     modifier = Modifier
                         .width(100.dp)
@@ -316,7 +316,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     .background(Color(0xff3C5970))){}
 
             Button(
-                onClick = {},
+                onClick = {navController.navigate("BemVindo")},
                 colors = ButtonDefaults.buttonColors(Color.Transparent),
                 contentPadding = PaddingValues(5.dp),
                 modifier = Modifier
@@ -324,7 +324,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     .shadow(10.dp, shape = RoundedCornerShape(0.dp), clip = true),
                 shape = RoundedCornerShape(0.dp)
             ) {
-                Icon(imageVector = Icons.Default.ExitToApp, contentDescription = "ícone pesquisa",
+                Icon(imageVector = Icons.Default.ExitToApp, contentDescription = "ícone sair",
                     tint = Color.White, modifier = Modifier.size(25.dp))
             }
         }
@@ -341,7 +341,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("OfflineMensagem2")},
                     colors = ButtonDefaults.buttonColors(Color(0x4D1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -487,7 +487,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Configuracoes")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -499,7 +499,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Busca")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -511,7 +511,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -523,7 +523,7 @@ fun CaixaEntradaOutrosModoOffline(navController: NavController) {
                         tint = Color.White, modifier = Modifier.size(45.dp))
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

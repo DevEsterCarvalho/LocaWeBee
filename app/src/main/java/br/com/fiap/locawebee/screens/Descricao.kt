@@ -86,7 +86,7 @@ fun Descricao(navController: NavController) {
                         .padding(horizontal = 16.dp, vertical = 10.dp)
                 )
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate("Intro")},
                     colors = ButtonDefaults.buttonColors(Color(color = 0xff1F41BB)),
                     shape = RoundedCornerShape(10.dp),
                     contentPadding = PaddingValues(5.dp),

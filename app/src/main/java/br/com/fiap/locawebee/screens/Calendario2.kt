@@ -53,10 +53,11 @@ import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 
 @Composable
 fun Calendario2(navController: NavController) {
-    Box(modifier = Modifier
-        .background(Color.White)
-        .fillMaxSize()
-    ){
+    Box(
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxSize()
+    ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
@@ -73,17 +74,22 @@ fun Calendario2(navController: NavController) {
                     )
                 }
         ) {
-            Row (verticalAlignment = Alignment.CenterVertically,
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier
                     .padding(top = 30.dp)
                     .fillMaxWidth()
-            ){
-                Button(onClick = {},
+            ) {
+                Button(
+                    onClick = {navController.navigate("Calendario")},
                     colors = ButtonDefaults.buttonColors(Color.White)
-                ){
-                    Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar a uma página",
-                        tint = Color.Black)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.KeyboardArrowLeft,
+                        contentDescription = "icone seta para voltar a uma página",
+                        tint = Color.Black
+                    )
                 }
                 Text(
                     text = "Calendário",
@@ -115,30 +121,40 @@ fun Calendario2(navController: NavController) {
                 .offset(y = (-70).dp)
                 .border(BorderStroke(width = 2.dp, color = Color(0xffF9F9F9)))
         ) {
-            Row (
+            Row(
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier
                     .fillMaxSize()
                     .width(340.dp)
                     .height(56.dp)
                     .padding(top = 15.dp)
-            ){
-                Button(onClick = { /*TODO*/ },
+            ) {
+                Button(
+                    onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(Color.White)
-                ){
-                    Icon(imageVector = Icons.Default.KeyboardArrowLeft, contentDescription = "icone seta para voltar um mes",
-                        tint = Color.Black)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.KeyboardArrowLeft,
+                        contentDescription = "icone seta para voltar um mes",
+                        tint = Color.Black
+                    )
                 }
-                Text(text = "Maio 2024",
+                Text(
+                    text = "Maio 2024",
                     fontSize = 20.sp,
                     fontFamily = LatoBold,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(top = 10.dp))
-                Button(onClick = { /*TODO*/ },
+                    modifier = Modifier.padding(top = 10.dp)
+                )
+                Button(
+                    onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(Color.White)
-                ){
-                    Icon(imageVector = Icons.Default.KeyboardArrowRight, contentDescription = "icone seta para avancar o mes",
-                        tint = Color.Black)
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.KeyboardArrowRight,
+                        contentDescription = "icone seta para avancar o mes",
+                        tint = Color.Black
+                    )
                 }
             }
             Column(
@@ -155,258 +171,359 @@ fun Calendario2(navController: NavController) {
                         .background(Color(0xff1D1F33))
                         .padding(bottom = 100.dp)
                 )
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "DOM",
+                ) {
+                    Text(
+                        text = "DOM",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "SEG",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "SEG",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "TER",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "TER",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "QUA",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "QUA",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "QUI",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "QUI",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "SEX",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "SEX",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
-                    Text(text = "SAB",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "SAB",
                         fontFamily = LatoRegular,
                         fontSize = 12.sp,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "1  ",
+                ) {
+                    Text(
+                        text = "1  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "2  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "2  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "3  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "3  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "4  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "4  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "5  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "5  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "6  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "6  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "7  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "7  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "  8",
+                ) {
+                    Text(
+                        text = "  8",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "  9",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "  9",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "10",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "10",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "11",
-                        fontFamily = LatoRegular,
-                        fontSize = 18.sp,
-                        color = Color.Black,
-                        textAlign = TextAlign.Center,
+                        color = Color.Black
+                    )
+                    Button(
+                        onClick = { navController.navigate("Calendario3") },
+                        colors = ButtonDefaults.buttonColors(Color.Transparent),
+                        contentPadding = PaddingValues(5.dp),
                         modifier = Modifier
-                            .border(BorderStroke(width = 1.dp, color = Color.Black),
-                                shape = RoundedCornerShape(5.dp))
-                            .padding(3.dp))
-                    Text(text = "12",
+                            .size(32.dp)
+                    ){
+                        Text(
+                            text = "11",
+                            fontFamily = LatoRegular,
+                            fontSize = 18.sp,
+                            color = Color.Black,
+                            textAlign = TextAlign.Center,
+                            modifier = Modifier
+                                .border(
+                                    BorderStroke(width = 1.dp, color = Color.Black),
+                                    shape = RoundedCornerShape(5.dp)
+                                )
+                                .padding(3.dp)
+                        )
+                    }
+                    Text(
+                        text = "12",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "13",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "13",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "14",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "14",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "15",
+                ) {
+                    Text(
+                        text = "15",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "16",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "16",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "17",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "17",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "18",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "18",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "19",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "19",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "20",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "20",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "21",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "21",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "22",
+                ) {
+                    Text(
+                        text = "22",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "23",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "23",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "24",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "24",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "25",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "25",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "26",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "26",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "27",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "27",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "28",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "28",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
-                Row (horizontalArrangement = Arrangement.SpaceAround,
+                Row(
+                    horizontalArrangement = Arrangement.SpaceAround,
                     verticalAlignment = Alignment.CenterVertically,
                     modifier = Modifier
                         .width(340.dp)
                         .height(50.dp)
-                ){
-                    Text(text = "29",
+                ) {
+                    Text(
+                        text = "29",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "30",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "30",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "31",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "31",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "1  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "1  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "2  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "2  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "3  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "3  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
-                    Text(text = "4  ",
+                        color = Color.Black
+                    )
+                    Text(
+                        text = "4  ",
                         fontFamily = LatoRegular,
                         fontSize = 18.sp,
                         textAlign = TextAlign.Center,
-                        color = Color.Black)
+                        color = Color.Black
+                    )
                 }
             }
         }
-        Column(horizontalAlignment = Alignment.CenterHorizontally,
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
             modifier = Modifier
                 .fillMaxSize()
@@ -422,11 +539,12 @@ fun Calendario2(navController: NavController) {
                 textAlign = TextAlign.Center
             )
         }
-        Box(modifier = Modifier
-            .align(Alignment.Center)
-            .padding(top = 550.dp)
-        ){
-            Row (
+        Box(
+            modifier = Modifier
+                .align(Alignment.Center)
+                .padding(top = 550.dp)
+        ) {
+            Row(
                 horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.End),
                 modifier = Modifier
                     .fillMaxWidth()
@@ -435,7 +553,7 @@ fun Calendario2(navController: NavController) {
                     .padding(end = 8.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate("NovoEmail") },
                     colors = ButtonDefaults.buttonColors(Color(0xff1F41BB)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -448,20 +566,20 @@ fun Calendario2(navController: NavController) {
                 }
             }
         }
-        Box (
+        Box(
             modifier = Modifier
                 .align(Alignment.Center)
                 .padding(top = 650.dp)
                 .background(Color(0xff1D1F33))
                 .border(1.dp, Color(0xffFFFFFF))
-        ){
-            Row (
+        ) {
+            Row(
                 horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.CenterHorizontally),
                 modifier = Modifier
                     .fillMaxWidth()
                     .width(375.dp)
                     .height(58.dp)
-            ){
+            ) {
                 Button(
                     onClick = { /*TODO*/ },
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
@@ -565,7 +683,7 @@ fun Calendario2(navController: NavController) {
                 }
             }
         }
-        Box (
+        Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .align(Alignment.BottomCenter)
@@ -581,7 +699,7 @@ fun Calendario2(navController: NavController) {
                     .height(76.dp)
             ) {
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate("Configuracoes") },
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -589,11 +707,13 @@ fun Calendario2(navController: NavController) {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Settings , contentDescription = "ícone settings",
-                        tint = Color.White, modifier = Modifier.size(45.dp))
+                    Icon(
+                        imageVector = Icons.Default.Settings, contentDescription = "ícone settings",
+                        tint = Color.White, modifier = Modifier.size(45.dp)
+                    )
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate("Busca") },
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -601,11 +721,13 @@ fun Calendario2(navController: NavController) {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Search, contentDescription = "ícone pesquisa",
-                        tint = Color.White, modifier = Modifier.size(45.dp))
+                    Icon(
+                        imageVector = Icons.Default.Search, contentDescription = "ícone pesquisa",
+                        tint = Color.White, modifier = Modifier.size(45.dp)
+                    )
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = { navController.navigate("Calendario") },
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -613,11 +735,15 @@ fun Calendario2(navController: NavController) {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.DateRange, contentDescription = "ícone calendário",
-                        tint = Color.White, modifier = Modifier.size(45.dp))
+                    Icon(
+                        imageVector = Icons.Default.DateRange,
+                        contentDescription = "ícone calendário",
+                        tint = Color.White,
+                        modifier = Modifier.size(45.dp)
+                    )
                 }
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("LojaPontos")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
@@ -625,8 +751,10 @@ fun Calendario2(navController: NavController) {
                         .shadow(10.dp, shape = RoundedCornerShape(4.dp), clip = true)
 
                 ) {
-                    Icon(imageVector = Icons.Default.Star, contentDescription = "ícone favoritos",
-                        tint = Color(color = 0xffFBBC24), modifier = Modifier.size(45.dp))
+                    Icon(
+                        imageVector = Icons.Default.Star, contentDescription = "ícone favoritos",
+                        tint = Color(color = 0xffFBBC24), modifier = Modifier.size(45.dp)
+                    )
                 }
             }
         }
