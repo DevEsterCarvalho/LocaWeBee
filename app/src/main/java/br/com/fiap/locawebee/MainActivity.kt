@@ -127,7 +127,7 @@ class MainActivity : ComponentActivity() {
                         composable(route = "OfflineMensagem") { OfflineMensagem(navController) }
                         composable(route = "Paixao") { Paixao(navController) }
                         composable(route = "PrimeiroAcesso") { PrimeiroAcesso(navController) }
-                        //composable(route = "Progresso") { Progresso(navController) }
+                        composable(route = "Progresso") { Progresso(navController) }
                         composable(route = "Progresso2") { Progresso2(navController) }
                         composable(route = "Recompensa") { Recompensa(navController) }
                         composable(route = "Recompensa2") { Recompensa2(navController) }
