@@ -125,7 +125,8 @@ fun Calendario4(navController: NavController) {
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         modifier = Modifier
-                            .size(70.dp)
+                                .size(70.dp)
+                            .border(BorderStroke(width = 2.dp, color = Color.Black))
                     ){
                         Image(
                             painter = painterResource(id = R.drawable.sacola_de_compras),
@@ -139,7 +140,6 @@ fun Calendario4(navController: NavController) {
                         contentPadding = PaddingValues(5.dp),
                         modifier = Modifier
                             .size(70.dp)
-                            .border(BorderStroke(width = 2.dp, color = Color.Black))
                     ) {
                         Image(
                             painter = painterResource(id = R.drawable.tesoura),
@@ -370,7 +370,7 @@ fun Calendario4(navController: NavController) {
                     .height(58.dp)
             ){
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

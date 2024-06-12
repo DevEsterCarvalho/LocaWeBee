@@ -299,7 +299,7 @@ fun Tutorial1(navController: NavController) {
                     .height(58.dp)
             ){
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier

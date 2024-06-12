@@ -204,7 +204,7 @@ fun LojaPontos(navController: NavController) {
 
                     )
                     Button(
-                        onClick = {navController.navigate("Recomempensa2")},
+                        onClick = {navController.navigate("Recompensa2")},
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         shape = RoundedCornerShape(4.dp),
@@ -259,7 +259,7 @@ fun LojaPontos(navController: NavController) {
 
                     )
                     Button(
-                        onClick = {navController.navigate("Recomempensa3")},
+                        onClick = {navController.navigate("Recompensa3")},
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         shape = RoundedCornerShape(4.dp),
@@ -316,7 +316,7 @@ fun LojaPontos(navController: NavController) {
 
                     )
                     Button(
-                        onClick = {navController.navigate("Recomempensa4")},
+                        onClick = {navController.navigate("Recompensa4")},
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         shape = RoundedCornerShape(4.dp),
@@ -373,7 +373,7 @@ fun LojaPontos(navController: NavController) {
 
                     )
                     Button(
-                        onClick = {navController.navigate("Recomempensa5")},
+                        onClick = {navController.navigate("Recompensa5")},
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         shape = RoundedCornerShape(4.dp),
@@ -430,7 +430,7 @@ fun LojaPontos(navController: NavController) {
 
                     )
                     Button(
-                        onClick = {navController.navigate("Recomempensa6")},
+                        onClick = {navController.navigate("Recompensa6")},
                         colors = ButtonDefaults.buttonColors(Color.Transparent),
                         contentPadding = PaddingValues(5.dp),
                         shape = RoundedCornerShape(4.dp),
@@ -490,7 +490,7 @@ fun LojaPontos(navController: NavController) {
                     .height(58.dp)
             ){
                 Button(
-                    onClick = { /*TODO*/ },
+                    onClick = {navController.navigate("CaixaEntradaPrincipal")},
                     colors = ButtonDefaults.buttonColors(Color(0xff1D1F33)),
                     contentPadding = PaddingValues(5.dp),
                     modifier = Modifier
