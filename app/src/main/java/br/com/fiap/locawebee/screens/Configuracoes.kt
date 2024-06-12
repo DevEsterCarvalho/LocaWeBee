@@ -132,6 +132,27 @@ fun Configuracoes(navController: NavController) {
             }
             Spacer(modifier = Modifier.height(8.dp))
             Button(
+                onClick = {navController.navigate("Tutorial")},
+                colors = ButtonDefaults.buttonColors(Color(0xffF1F4FF)),
+                shape = RoundedCornerShape(4.dp),
+                contentPadding = PaddingValues(5.dp),
+                elevation = ButtonDefaults.buttonElevation(3.dp),
+                modifier = Modifier
+                    .width(309.dp)
+                    .height(36.dp)
+            ) {
+                Text(
+                    text = "Ainda tem dúvidas? Acesse o Tutorial",
+                    color = (Color(0xff626262)),
+                    fontSize = 16.sp,
+                    fontFamily = PoppinsMedium,
+                    textAlign = TextAlign.Start,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(start = 7.dp)
+                )
+            }
+            Button(
                 onClick = {},
                 colors = ButtonDefaults.buttonColors(Color(0xffF1F4FF)),
                 shape = RoundedCornerShape(4.dp),
