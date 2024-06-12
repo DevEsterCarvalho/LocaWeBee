@@ -152,6 +152,7 @@ fun Configuracoes(navController: NavController) {
                         .padding(start = 7.dp)
                 )
             }
+            Spacer(modifier = Modifier.height(15.dp))
             Button(
                 onClick = {},
                 colors = ButtonDefaults.buttonColors(Color(0xffF1F4FF)),
