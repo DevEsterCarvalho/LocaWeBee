@@ -12,9 +12,11 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -32,18 +34,27 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
+import br.com.fiap.locawebee.ui.theme.OpenSansBold
+import br.com.fiap.locawebee.ui.theme.OpenSansRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
+import br.com.fiap.locawebee.ui.theme.RobotoBold
+import br.com.fiap.locawebee.ui.theme.RobotoRegular
 
 @Composable
 fun CaixaEntradaPrincipal(navController: NavController) {
@@ -173,16 +184,273 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                 Spacer(modifier = Modifier.width(5.dp))
             }
         }
-        Row (verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxWidth()
-                .padding(top = 250.dp)
+        Column (
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(bottom = 280.dp),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+
         ){
-            Text(text = "Ainda nada por aqui!",
-                color = Color(0xff1D1F33),
-                fontSize = 16.sp,
-                fontFamily = PoppinsRegular
+            Spacer(modifier = Modifier.height(15.dp))
+            Box(
+                modifier = Modifier
+                    .width(16.dp)
+                    .height(1.dp)
+                    .background(Color(0xff1D1F33))
+                    .align(Alignment.CenterHorizontally)
             )
+            Spacer(modifier = Modifier.height(10.dp))
+            Column(
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .background(color = Color(0xffD9D9D9))
+            ) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .padding(start = 20.dp, bottom = 10.dp, top = 10.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.ricardo_remetente),
+                        contentDescription = "ícone remetente Ricardo",
+                        modifier = Modifier
+                            .size(35.7.dp)
+                            .clip(CircleShape)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.Start,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = "Ricardo Mendes",
+                            fontSize = 15.sp,
+                            fontFamily = OpenSansBold,
+                            fontWeight = FontWeight.Bold,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.width(230.dp)
+                        )
+                        val text = buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                                append("Preparado para a próxima semana?\n")
+                            }
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
+                                append("Estamos ansiosos para te receber no nos... ")
+                            }
+                        }
+
+                        Text(
+                            text = text,
+                            fontSize = 13.sp,
+                            fontFamily = RobotoBold,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.width(251.8.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(end = 20.dp)
+                            .weight(0.3f)
+                    ) {
+                        Text(
+                            text = "6 Mai",
+                            fontFamily = RobotoBold,
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 12.sp,
+                            color = Color(0xff292929),
+                            modifier = Modifier.padding(bottom = 5.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Image(
+                            painter = painterResource(id = R.drawable.estrela_vazia),
+                            contentDescription = "ícone estrela vazia",
+                            modifier = Modifier
+                                .size(width = 16.08.dp, height = 15.29.dp)
+                                .clip(CircleShape)
+                        )
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Column(
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ){
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .padding(start = 20.dp, bottom = 10.dp, top = 10.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.bemvestido_remetente),
+                        contentDescription = "ícone remetente bem vestido",
+                        modifier = Modifier
+                            .size(35.7.dp)
+                            .clip(CircleShape)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.Start,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = "Bem Vestido - Bem-Vindo(a)!",
+                            fontSize = 15.sp,
+                            fontFamily = OpenSansRegular,
+                            fontWeight = FontWeight.Normal,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.width(230.dp)
+                        )
+                        val text = buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
+                                append("Saiba Mais\n")
+                            }
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                                append("Parabéns, por criar sua conta! ")
+                            }
+                        }
+
+                        Text(
+                            text = text,
+                            fontSize = 13.sp,
+                            fontFamily = RobotoRegular,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.width(251.8.dp)
+                        )
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(end = 20.dp)
+                            .weight(0.3f)
+                    ) {
+                        Text(
+                            text = "6 Mai",
+                            fontFamily = RobotoRegular,
+                            fontWeight = FontWeight.Normal,
+                            fontSize = 12.sp,
+                            color = Color(0xff292929),
+                            modifier = Modifier.padding(bottom = 5.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "ícone favoritos",
+                            tint = Color(color = 0xffFBBC05),
+                            modifier = Modifier.size(width = 16.08.dp, height = 15.29.dp)
+                        )
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(10.dp))
+            Column(
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
+            ){
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier
+                        .padding(start = 20.dp, bottom = 10.dp, top = 10.dp)
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.lovedecoracao_remetente),
+                        contentDescription = "ícone remetente love decorações",
+                        modifier = Modifier
+                            .size(35.7.dp)
+                            .clip(CircleShape)
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.Start,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(
+                            text = "Love Decorações",
+                            fontSize = 15.sp,
+                            fontFamily = OpenSansRegular,
+                            fontWeight = FontWeight.Normal,
+                            textAlign = TextAlign.Start,
+                            color = Color.Black,
+                            modifier = Modifier.width(230.dp)
+                        )
+                        val text = buildAnnotatedString {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
+                                append("Nota Fiscal\n")
+                            }
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                                append("A Love Decorações agradece sua pref...")
+                            }
+                        }
+
+                        Text(
+                            text = text,
+                            fontSize = 13.sp,
+                            fontFamily = RobotoRegular,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier.width(251.8.dp)
+                        )
+                        Spacer(modifier = Modifier.height(3.dp))
+                        Row {
+                            Image(
+                                painter = painterResource(id = R.drawable.notafiscal_pdf),
+                                contentDescription = "pdf nota fiscal",
+                                modifier = Modifier
+                                    .size(width = 109.dp, height = 24.dp)
+                                    .clip(CircleShape)
+                            )
+                            Image(
+                                painter = painterResource(id = R.drawable.imagem_pdf),
+                                contentDescription = "pdf imagem",
+                                modifier = Modifier
+                                    .size(width = 109.dp, height = 24.dp)
+                                    .clip(CircleShape)
+                            )
+                            Text(
+                                text = "+3",
+                                fontFamily = RobotoRegular,
+                                fontWeight = FontWeight.Normal,
+                                fontSize = 12.sp,
+                                color = Color(0xff292929),
+                                textAlign = TextAlign.Center,
+                                modifier = Modifier.padding(top = 3.dp)
+                            )
+                        }
+                    }
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Column(
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .padding(end = 20.dp)
+                            .weight(0.3f)
+                    ) {
+                        Text(
+                            text = "5 Mai",
+                            fontFamily = RobotoRegular,
+                            fontWeight = FontWeight.Normal,
+                            fontSize = 12.sp,
+                            color = Color(0xff292929),
+                            modifier = Modifier.padding(bottom = 5.dp)
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Icon(
+                            imageVector = Icons.Default.Star,
+                            contentDescription = "ícone favoritos",
+                            tint = Color(color = 0xffFBBC05),
+                            modifier = Modifier.size(width = 16.08.dp, height = 15.29.dp)
+                        )
+                    }
+                }
+            }
         }
         Button(
             onClick = {navController.navigate("CaixaEntradaOutros")},
@@ -410,8 +678,8 @@ fun CaixaEntradaPrincipal(navController: NavController) {
     }
 }
 
-/*
-@Preview(showBackground = true)
+
+/*@Preview(showBackground = true)
 @Composable
 fun CaixaEntradaPrincipalPreview() {
     Surface(

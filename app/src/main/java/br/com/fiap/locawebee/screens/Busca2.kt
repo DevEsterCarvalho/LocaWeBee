@@ -306,7 +306,7 @@ fun Busca2(navController: NavController) {
                         modifier = Modifier.weight(1f)
                     ) {
                         val titulo = buildAnnotatedString {
-                            withStyle(style = SpanStyle(color = Color.White, background = Color.Black, fontWeight = FontWeight.Bold)) {
+                            withStyle(style = SpanStyle(color = Color.White, background = Color.Black, fontWeight = FontWeight.Normal)) {
                                 append("Bem")
                             }
                             withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {

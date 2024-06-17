@@ -176,7 +176,7 @@ fun Lixeira(navController: NavController) {
                             withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
                                 append("Preparado para a próxima semana?\n")
                             }
-                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Bold)) {
                                 append("Estamos ansiosos para te receber no nos... ")
                             }
                         }
@@ -184,7 +184,7 @@ fun Lixeira(navController: NavController) {
                         Text(
                             text = text,
                             fontSize = 13.sp,
-                            fontFamily = RobotoRegular,
+                            fontFamily = RobotoBold,
                             textAlign = TextAlign.Start,
                             modifier = Modifier.width(251.8.dp)
                         )
@@ -249,7 +249,7 @@ fun Lixeira(navController: NavController) {
                             withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
                                 append("Saiba Mais\n")
                             }
-                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
+                            withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Bold)) {
                                 append("Parabéns, por criar sua conta! ")
                             }
                         }
@@ -257,7 +257,7 @@ fun Lixeira(navController: NavController) {
                         Text(
                             text = text,
                             fontSize = 13.sp,
-                            fontFamily = RobotoRegular,
+                            fontFamily = RobotoBold,
                             textAlign = TextAlign.Start,
                             modifier = Modifier.width(251.8.dp)
                         )

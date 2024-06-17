@@ -51,6 +51,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import br.com.fiap.locawebee.R
 import br.com.fiap.locawebee.ui.theme.OpenSansBold
+import br.com.fiap.locawebee.ui.theme.OpenSansRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsRegular
 import br.com.fiap.locawebee.ui.theme.PoppinsSemiBold
 import br.com.fiap.locawebee.ui.theme.RobotoBold
@@ -129,8 +130,7 @@ fun Intro3(navController: NavController) {
             Spacer(modifier = Modifier.height(15.dp))
             Column(
                 verticalArrangement = Arrangement.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
+                modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
                     verticalAlignment = Alignment.CenterVertically,
@@ -152,14 +152,14 @@ fun Intro3(navController: NavController) {
                         Text(
                             text = "Ricardo Mendes",
                             fontSize = 15.sp,
-                            fontFamily = OpenSansBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = OpenSansRegular,
+                            fontWeight = FontWeight.Normal,
                             textAlign = TextAlign.Start,
                             color = Color.Black,
                             modifier = Modifier.width(230.dp)
                         )
                         val text = buildAnnotatedString {
-                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
                                 append("Preparado para a próxima semana?\n")
                             }
                             withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
@@ -185,8 +185,8 @@ fun Intro3(navController: NavController) {
                     ) {
                         Text(
                             text = "6 Mai",
-                            fontFamily = RobotoBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = RobotoRegular,
+                            fontWeight = FontWeight.Normal,
                             fontSize = 12.sp,
                             color = Color(0xff292929),
                             modifier = Modifier.padding(bottom = 5.dp)
@@ -226,14 +226,14 @@ fun Intro3(navController: NavController) {
                         Text(
                             text = "Bem Vestido - Bem-Vindo(a)!",
                             fontSize = 15.sp,
-                            fontFamily = OpenSansBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = OpenSansRegular,
+                            fontWeight = FontWeight.Normal,
                             textAlign = TextAlign.Start,
                             color = Color.Black,
                             modifier = Modifier.width(230.dp)
                         )
                         val text = buildAnnotatedString {
-                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
                                 append("Saiba Mais\n")
                             }
                             withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
@@ -259,8 +259,8 @@ fun Intro3(navController: NavController) {
                     ) {
                         Text(
                             text = "6 Mai",
-                            fontFamily = RobotoBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = RobotoRegular,
+                            fontWeight = FontWeight.Normal,
                             fontSize = 12.sp,
                             color = Color(0xff292929),
                             modifier = Modifier.padding(bottom = 5.dp)
@@ -301,14 +301,14 @@ fun Intro3(navController: NavController) {
                         Text(
                             text = "Love Decorações",
                             fontSize = 15.sp,
-                            fontFamily = OpenSansBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = OpenSansRegular,
+                            fontWeight = FontWeight.Normal,
                             textAlign = TextAlign.Start,
                             color = Color.Black,
                             modifier = Modifier.width(230.dp)
                         )
                         val text = buildAnnotatedString {
-                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Bold)) {
+                            withStyle(style = SpanStyle(color = Color(0xff292929), fontWeight = FontWeight.Normal)) {
                                 append("Nota Fiscal\n")
                             }
                             withStyle(style = SpanStyle(color = Color(0xff5D5C5D), fontWeight = FontWeight.Normal)) {
@@ -341,8 +341,8 @@ fun Intro3(navController: NavController) {
                             )
                             Text(
                                 text = "+3",
-                                fontFamily = RobotoBold,
-                                fontWeight = FontWeight.Bold,
+                                fontFamily = RobotoRegular,
+                                fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                                 color = Color(0xff292929),
                                 textAlign = TextAlign.Center,
@@ -360,8 +360,8 @@ fun Intro3(navController: NavController) {
                     ) {
                         Text(
                             text = "5 Mai",
-                            fontFamily = RobotoBold,
-                            fontWeight = FontWeight.Bold,
+                            fontFamily = RobotoRegular,
+                            fontWeight = FontWeight.Normal,
                             fontSize = 12.sp,
                             color = Color(0xff292929),
                             modifier = Modifier.padding(bottom = 5.dp)
