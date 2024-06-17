@@ -84,7 +84,7 @@ fun CaixaEntradaPrincipal(navController: NavController) {
 
                 ) {
                     Text(
-                        text = "Tudo organizado!",
+                        text = "Você está quase lá!",
                         fontSize = 14.sp,
                         fontFamily = PoppinsRegular,
                         textAlign = TextAlign.Center,
@@ -92,12 +92,13 @@ fun CaixaEntradaPrincipal(navController: NavController) {
                         modifier = Modifier.width(144.dp)
                     )
                     LinearProgressIndicator(
-                        progress = 0f,
+                        progress = 0.7f,
                         modifier = Modifier
                             .height(20.dp)
                             .width(230.dp)
                             .align(Alignment.CenterHorizontally),
                         trackColor = Color(0xffF1F4FF),
+                        color = Color(0xff45BF6B),
                         strokeCap = StrokeCap.Round
                     )
                 }
